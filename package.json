@@ -7,7 +7,7 @@
     "test:lock": "lockfile-lint --path package-lock.json --allowed-hosts npm tgz.pm2.io --validate-https",
     "test:audit": "npm audit",
     "test:security": "npm run test:audit && npm run test:lock",
-    "test:lint": "eslint lib tests bin app.js --ext js",
+    "test:lint": "eslint src --ext js",
     "test:coverage": "cross-env MODE=test nyc mocha --config .mocharc.json 'tests/**/*test.js",
     "test": "npm run test:lint && npm run test:security && npm run test:coverage"
   },
@@ -32,8 +32,11 @@
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/runtime": "^7.8.4",
+    "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
     "jscpd": "^2.0.16",
+    "lockfile-lint": "^3.0.18",
     "mocha": "^7.0.1",
     "nodemon": "^2.0.2",
     "nyc": "^15.0.0",
@@ -42,6 +45,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "babel-plugin-module-resolver": "^4.0.0",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
     "bytes": "^3.1.0",
@@ -55,6 +59,8 @@
     "logger-decorator": "^1.1.0",
     "luxon": "^1.22.0",
     "ms": "^2.1.2",
-    "uuid": "^3.4.0"
+    "myrmidon": "^1.1.0",
+    "uuid": "^3.4.0",
+    "winston": "^3.2.1"
   }
 }

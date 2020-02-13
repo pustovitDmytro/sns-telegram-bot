@@ -22,6 +22,7 @@
           "alias": {
             "etc": "./etc/",
             "src": "./src",
+            "lib": "./src/lib",
             "tests": "./tests",
             "seeds": "./seeds",
             "package": "./package.json"

@@ -1,0 +1,13 @@
+{
+    "app": {
+        "port": "{{PORT}}",
+        "prefix": "/api"
+    },
+    "cipher": {
+        "algorithm" : "aes-256-ctr",
+        "secret": "{{SECRET}}"
+    },
+    "updates": {
+        
+    }
+}
