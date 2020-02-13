@@ -1,0 +1,38 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
+        "module-resolver",
+        {
+          "alias": {
+            "etc": "./etc/",
+            "src": "./src",
+            "tests": "./tests",
+            "seeds": "./seeds",
+            "package": "./package.json"
+          }
+        }
+      ],
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-optional-chaining"
+    ],
+    "ignore": [
+      "node_modules"
+    ]
+  }
+  

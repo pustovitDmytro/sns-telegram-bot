@@ -1,0 +1,60 @@
+{
+  "name": "sns-telegram-bot",
+  "version": "0.0.1",
+  "description": "",
+  "main": "runner.js",
+  "scripts": {
+    "test:lock": "lockfile-lint --path package-lock.json --allowed-hosts npm tgz.pm2.io --validate-https",
+    "test:audit": "npm audit",
+    "test:security": "npm run test:audit && npm run test:lock",
+    "test:lint": "eslint lib tests bin app.js --ext js",
+    "test:coverage": "cross-env MODE=test nyc mocha --config .mocharc.json 'tests/**/*test.js",
+    "test": "npm run test:lint && npm run test:security && npm run test:coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pustovitDmytro/sns-telegram-bot.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pustovitDmytro/sns-telegram-bot/issues"
+  },
+  "homepage": "https://github.com/pustovitDmytro/sns-telegram-bot#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "eslint": "^6.8.0",
+    "jscpd": "^2.0.16",
+    "mocha": "^7.0.1",
+    "nodemon": "^2.0.2",
+    "nyc": "^15.0.0",
+    "pm2": "^4.2.3",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "bytes": "^3.1.0",
+    "confme": "0.0.12",
+    "cors": "^2.8.5",
+    "docopt": "^0.6.2",
+    "express": "^4.17.1",
+    "fs-extra": "^8.1.0",
+    "livr": "^2.3.0",
+    "livr-extra-rules": "^1.2.1",
+    "logger-decorator": "^1.1.0",
+    "luxon": "^1.22.0",
+    "ms": "^2.1.2",
+    "uuid": "^3.4.0"
+  }
+}

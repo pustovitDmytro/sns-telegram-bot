@@ -1,0 +1,8 @@
+{
+    "threshold": 5,
+    "reporters": ["html", "console"],
+    "output": "./reports/jscpd",
+    "minLines": 3,
+    "minTokens": 30,
+    "ignoreCase": true
+}
