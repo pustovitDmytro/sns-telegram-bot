@@ -20,7 +20,7 @@
         "module-resolver",
         {
           "alias": {
-            "etc": "./etc/",
+            "config": "./src/config.js",
             "src": "./src",
             "lib": "./src/lib",
             "tests": "./tests",

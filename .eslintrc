@@ -236,7 +236,14 @@
     },
     "settings": {
         "import/resolver": {
-          "babel-module": {}
+          "babel-module": {
+          },
+          "node": {
+            "extensions": [
+              ".js",
+              ".json"
+            ]
+          }
         }
     }
 }

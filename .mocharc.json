@@ -9,5 +9,5 @@
     "color": true,
     "full-trace": true,
     "recursive": true,
-    "require": ["@babel/register", "./tests/test.env.js"]
+    "require": ["@babel/register", "./tests/init.js"]
 }

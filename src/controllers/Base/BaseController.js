@@ -1,6 +1,6 @@
+import { isObject, isFunction } from 'myrmidon';
 import BaseService from 'src/services/Base';
 import Error from 'src/error';
-import { isObject, isFunction } from 'myrmidon';
 import { log } from 'lib/logger';
 
 export default class BaseController {
