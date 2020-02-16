@@ -41,16 +41,17 @@ const logger = createLogger({
 
 export default logger;
 
-export const log = new Decorator({
+export const decorator = new Decorator({
     logger     : logger.log.bind(logger),
     errorLevel : d => d?.error instanceof Error ? 'warn' : 'error',
     level      : 'notice'
 });
 
-export const debug = log({ level: 'debug' });
-export const verbose = log({ level: 'verbose' });
-export const notice = log({ level: 'notice' });
-export const info = log({ level: 'info' });
+export const debug = decorator({ level: 'debug' });
+export const verbose = decorator({ level: 'verbose' });
+export const notice = decorator({ level: 'notice' });
+export const info = decorator({ level: 'info' });
+export const log = decorator({ level: 'info' });
 
 const trackTransports = [];
 

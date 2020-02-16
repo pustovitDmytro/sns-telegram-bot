@@ -1,0 +1,3 @@
+{
+    "default": "Amazon CloudWatch Alarm {{AlarmName}} in the {{Region}} region has entered the {{NewStateValue}} state, because '{{NewStateReason}}' at {{StateChangeTime}}"
+}

@@ -1,13 +1,20 @@
 {
-    "app": {
-        "port": "{{PORT}}",
-        "prefix": "/api"
-    },
     "cipher": {
         "algorithm" : "aes-256-ctr",
         "secret": "{{SECRET}}"
     },
+    "bot": {
+        "id":"{{BOT_ID}}",
+        "token":"{{BOT_TOKEN}}" 
+    },
     "updates": {
-        
+        "webhook": "{{WEBHOOK}}",
+        "mode": "{{UPDATES_MODE}}",
+        "interval": "{{POLL}}"
+    },
+    "app": {
+        "url": "{{APP_URL}}",
+        "prefix": "{{API_PREFIX}}",
+        "port": "{{PORT}}"
     }
 }

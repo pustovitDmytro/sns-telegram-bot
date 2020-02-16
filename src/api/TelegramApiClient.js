@@ -1,5 +1,6 @@
 import Error from 'src/error';
-import { verbose } from '../logger';
+import { verbose } from 'lib/logger';
+import { dumpUpdate, dumpMessage } from 'src/utils';
 import ApiClient from './ApiClient';
 
 export default @verbose class TelegramApiClient extends ApiClient {
@@ -25,7 +26,7 @@ export default @verbose class TelegramApiClient extends ApiClient {
             offset : lastUpdate + 1
         });
 
-        return data.map(dumpUpdate);
+        return data.result.map(dumpUpdate);
     }
 
     async sendMessage(chatId, html) {

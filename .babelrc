@@ -25,6 +25,7 @@
             "lib": "./src/lib",
             "tests": "./tests",
             "seeds": "./seeds",
+            "templates": "./templates",
             "package": "./package.json"
           }
         }

@@ -4,6 +4,7 @@ import ms from 'ms';
 import Error from 'src/error';
 import { API_CLIENT_HTTP_ERRORS } from 'src/constants';
 import logger from 'lib/logger';
+import { resolveUrl } from 'src/utils';
 
 class ApiError extends Error {
     constructor(httpError, opts) {

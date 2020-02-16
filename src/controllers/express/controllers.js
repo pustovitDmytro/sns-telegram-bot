@@ -1,8 +1,13 @@
 import { system, sessions } from 'src/services';
 import ExpressController from '../Base/ExpressController';
-import { health } from './custom';
+import { health, router } from './custom';
 
 const express = new ExpressController();
+
+const awsRouter = {
+    SnsSubscriptionConfirmation : '',
+    SnsAlarmEvent               : ''
+};
 
 export default express.buildController({
     system : {
@@ -17,6 +22,15 @@ export default express.buildController({
             }),
             undefined,
             ExpressController.renderAsSessionMiddlevare
+        ),
+        checkAWS : express.makeServiceRunner(
+            sessions.CheckAWS,
+            undefined,
+            undefined,
+            ExpressController.renderAsSessionMiddlevare
         )
+    },
+    sns : {
+        event : router.bind(awsRouter, express)
     }
 });
