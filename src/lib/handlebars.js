@@ -1,7 +1,7 @@
-import path       from 'path';
 import handlebars from 'handlebars';
 import logger     from 'lib/logger';
 import TEMPLATES from 'templates';
+import { app } from 'config';
 
 handlebars.registerHelper('json', (object) => {
     return JSON.stringify(object, null, 4);
@@ -9,6 +9,10 @@ handlebars.registerHelper('json', (object) => {
 
 handlebars.registerHelper('lower', (string) => {
     return string.toLowerCase();
+});
+
+handlebars.registerHelper('appUrl', () => {
+    return app.url;
 });
 
 class Handlebars {

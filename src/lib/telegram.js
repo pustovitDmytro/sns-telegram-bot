@@ -5,6 +5,7 @@ import logger, { log } from 'lib/logger';
 import TelegramApiClient from 'src/api/TelegramApiClient';
 import Poll from 'lib/polling';
 import handlebars from 'lib/handlebars';
+import aes from 'lib/aes';
 
 const isTest = process.env.MODE === 'test';
 
@@ -17,6 +18,7 @@ class Telegram {
             mock    : isTest
         });
         this._init(updates);
+        this._id = +bot.id;
     }
     async _init({ mode, interval, webhook }) {
         if (mode === 'polling') this._initPolling(interval);
@@ -40,11 +42,16 @@ class Telegram {
             logger.verbose(`WEBHOOK_URL HAS BEEN ALREADY SET TO ${webhookUrl}`);
         }
     }
-    processUpdate = update => {
-        const { message } = update;
-        const html = handlebars.templates.REPORT({ message });
+    processUpdate = async update => {
+        const { type, payload, to, from } = update.message;
+        const isAddedToGroup = type === 'NEW_MEMBER' && payload.id === this._id;
 
-        return this.sendMessage(message.from, html);
+        if (isAddedToGroup) {
+            const token = aes.encrypt({ c: to.id, u: from.id, d: +new Date() });
+            const answer = handlebars.templates.telegram.urlSuccess({ token });
+
+            return this.sendMessage(to, answer);
+        }
     }
 
     polling = async () => {

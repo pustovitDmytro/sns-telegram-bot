@@ -19,15 +19,20 @@ export function dumpMessage(message) {
         from.forward = dumpSender(forward);
         from.forward.date = formatDate(message.forward_date);
     }
+    const type = message.text && 'TEXT'
+    || message.sticker && 'STICKER'
+    || message.new_chat_member && 'NEW_MEMBER';
 
     return {
         id      : message.message_id,
         from,
         to,
         payload : {
-            text    : message.text,
-            sticker : dumpSticker(message.sticker)
-        },
+            TEXT       : message.text,
+            STICKER    : dumpSticker(message.sticker),
+            NEW_MEMBER : dumpSender(message.new_chat_member)
+        }[type],
+        type,
         date : formatDate(message.date)
     };
 }

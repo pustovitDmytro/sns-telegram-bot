@@ -1,0 +1,3 @@
+{
+    "urlSuccess": "Your url: {{appUrl}}/sns/{{token}}"
+}

@@ -11,8 +11,7 @@ export default class Poll {
                 await this.run();
                 this.start();
             } catch (error) {
-                logger.error('POLLING_ERROR:');
-                logger.error(error);
+                logger.error(`POLLING_ERROR: ${error.message}`);
                 this.start();
             }
         }, this.timeout);

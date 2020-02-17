@@ -4,12 +4,20 @@ import { dumpUpdate, dumpMessage } from 'src/utils';
 import ApiClient from './ApiClient';
 
 export default @verbose class TelegramApiClient extends ApiClient {
+    async request() {
+        if (this.mock) return;
+        const response = await super.request(...arguments);
+
+        if (!response.ok) throw response;
+
+        return response.result;
+    }
     throwApiError(httpError, message) {
         const isHttpError = !!httpError.isAxiosError;
 
         if (isHttpError) return super.throwApiError(httpError);
 
-        const error = new Error('INTERNAL_DOCUMENT_SERVER_ERROR', {
+        const error = new Error('INTERNAL_TELEGRAM_ERROR', {
             httpError,
             code : this.ERROR_CODE
         });
@@ -26,7 +34,7 @@ export default @verbose class TelegramApiClient extends ApiClient {
             offset : lastUpdate + 1
         });
 
-        return data.result.map(dumpUpdate);
+        return data.map(dumpUpdate);
     }
 
     async sendMessage(chatId, html) {

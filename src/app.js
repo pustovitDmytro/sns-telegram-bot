@@ -1,5 +1,5 @@
 import 'lib/livr';
-import app from './controllers/express';
+import app from 'src/controllers/express';
 import 'lib/telegram';
 
 export default app;
