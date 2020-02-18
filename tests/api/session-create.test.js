@@ -1,19 +1,19 @@
 import { assert } from 'chai';
+import { getToken } from 'seeds';
 import request from '../request';
 
 suite.only('Create Session');
 
-const tgUserId = '11111';
-
-test('Positive: myself and template', async () => {
-    const template =  'Amazon CloudWatch Alarm "{{AlarmName}}" in the {{Region}} region has entered the {{NewStateValue}} state, because "{{NewStateReason}}" at {{StateChangeTime}}';
-    const command = `/url ${tgUserId} ${template}`;
+test.only('Positive: on add to channel', async () => {
+    const payload = getToken[0];
 
     await request
-        .get('/api/v1/info')
+        .post('/api/v1/updates/test_webhook_url')
+        .send(payload)
         .expect(200)
         .expect('Content-Type', /json/)
         .expect(({ body }) => {
+            console.log('body: ', body);
         });
 });
 

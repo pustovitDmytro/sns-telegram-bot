@@ -1,5 +1,5 @@
 import ServiceBase  from '../Base';
-import { Confirm, Event } from '../sns';
+// import { Confirm, Event } from '../sns';
 
 export default class SessionsCheck extends ServiceBase {
     static LOG_LEVEL = 'verbose'
@@ -8,9 +8,7 @@ export default class SessionsCheck extends ServiceBase {
         body : [ 'required', 'any_object' ]
     };
 
-    async execute({ token }) {
-        console.log('token: ', token);
-
+    async execute() {
         return {
             service : 'aws',
             type    : 'SnsSubscriptionConfirmation'

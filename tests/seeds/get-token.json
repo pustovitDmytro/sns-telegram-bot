@@ -1,0 +1,43 @@
+[{
+    "update_id": 990200836,
+    "message": {
+        "message_id": 29,
+        "from": {
+            "id": 238585617,
+            "is_bot": false,
+            "first_name": "Дмитро",
+            "last_name": "Пустовіт",
+            "username": "dimapustovit",
+            "language_code": "ru"
+        },
+        "chat": {
+            "id": -389952175,
+            "title": "smallest stove",
+            "type": "group",
+            "all_members_are_administrators": true
+        },
+        "date": 1581980648,
+        "new_chat_participant": {
+            "id": 982462515,
+            "is_bot": true,
+            "first_name": "sns_bot",
+            "username": "aws_sns_to_tg_bot"
+        },
+        "new_chat_member": {
+            "id": 982462515,
+            "is_bot": true,
+            "first_name": "sns_bot",
+            "username": "aws_sns_to_tg_bot"
+        },
+        "new_chat_members": [
+            [
+                {
+                    "id": 982462515,
+                    "is_bot": true,
+                    "first_name": "sns_bot",
+                    "username": "aws_sns_to_tg_bot"
+                }
+            ]
+        ]
+    }
+}]

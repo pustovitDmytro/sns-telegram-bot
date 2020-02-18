@@ -1,5 +1,11 @@
-import messages from '../seeds/tg-messages-text';
+import seeds from 'seeds';
 
-export const seeds = {
-    messages
+export {
+    seeds
 };
+
+export class Test {
+
+}
+
+export default new Test();

@@ -10,3 +10,17 @@
 //     "Signature" : "Pp34koavWLKw7jYKoD28oCGffmlOVSFMiJe70+sxyQTgIhNtgsBKq0NBoEldJZHKzte1Nl8W5D0k54x4RRI5Pj5gzwGepUB78MDX2bp5E3lakY/RODoEZAmpffFI1VoIn5grrfIBmLY6nx1gMidhv5dgCkgGCs8B5Lo37bbIrIn/7Rewdr0NPO1Lzu1FfZlIQ2pZ8xjwCJhb8HCXI6TI3aLGIYlTr59RVBjW3UsxhyJlhgPCWPp/0F62ljglWnK7bNh6K9MmTcX483EvOsFh5p1AdBuXtEe5v6JWvqFcml6z00tfTKpUVfyrBdRkirgVHSlFeCBRic244N5a00Vb8Q==",
 //     "SigningCertURL" : "https://sns.eu-central-1.amazonaws.com/SimpleNotificationService-a86cb10b4e1f29c941702d737128f7b6.pem"
 //   }
+
+
+import ServiceBase from '../Base';
+
+export default class ConfirmSNS extends ServiceBase {
+    static LOG_LEVEL = 'verbose'
+    static rules = {};
+
+    async execute() {
+        console.log('confirm');
+
+        return {};
+    }
+}

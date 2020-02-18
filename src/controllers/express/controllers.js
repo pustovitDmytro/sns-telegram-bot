@@ -1,12 +1,12 @@
-import { system, sessions } from 'src/services';
+import { system, sessions, sns, telegram } from 'src/services';
 import ExpressController from '../Base/ExpressController';
 import { health, router } from './custom';
 
 const express = new ExpressController();
 
 const awsRouter = {
-    SnsSubscriptionConfirmation : '',
-    SnsAlarmEvent               : ''
+    SnsSubscriptionConfirmation : sns.Confirm,
+    SnsAlarmEvent               : sns.Event
 };
 
 export default express.buildController({
@@ -32,5 +32,8 @@ export default express.buildController({
     },
     sns : {
         event : router.bind(awsRouter, express)
+    },
+    telegram : {
+        update : telegram.ProcessUpdate
     }
 });

@@ -1,4 +1,5 @@
+import path from 'path';
 import dotenv from 'dotenv';
 
-dotenv.config({ path: './test.env' });
+dotenv.config({ path: path.join(__dirname, './test.env') });
 

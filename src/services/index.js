@@ -1,8 +1,12 @@
 import system   from './system';
 import sessions from './sessions';
+import sns from './sns';
+import telegram from './telegram';
 
-module.exports = {
+export {
     system,
-    sessions
+    sessions,
+    sns,
+    telegram
 };
 

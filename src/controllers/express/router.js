@@ -1,18 +1,20 @@
 import express from 'express';
-import { updates, isTest } from 'src/config';
+import { updates } from 'src/config';
 import controllers from './controllers';
 
 const router = express.Router();
-const { sessions, system } = controllers;
+const { sessions, system, sns, telegram } = controllers;
 
 // system
 router.get('/health', system.health);
 router.get('/info', system.info);
 
-const useWebhook = updates.mode === 'webhook' || isTest;
+const useWebhook = updates.mode === 'webhook';
 
 if (useWebhook) {
-    router.post(`/updates/${updates.webhook}`, controllers.updates.process);
+    router.post(`/updates/${updates.webhook}`, telegram.update);
 }
+
+router.post('/sns/:token', sessions.checkAWS, sns.event);
 
 export default router;
