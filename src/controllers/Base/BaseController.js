@@ -1,7 +1,7 @@
 import { isObject, isFunction } from 'myrmidon';
 import BaseService from 'src/services/Base';
 import Error from 'src/error';
-import { log } from 'lib/logger';
+import { decorator } from 'lib/logger';
 
 export default class BaseController {
     buildController(config) {
@@ -30,14 +30,14 @@ export default class BaseController {
 
     runService(Service, { context, params, options }) {
         const service = new Service({ context, options });
-        const decorator = log({
+        const dec = decorator({
             serviceName      : service.constructor.name,
             level            : service.constructor.LOG_LEVEL,
             contextSanitizer : service.sanitizeContext,
             paramsSanitizer  : service.sanitizeParams
         });
 
-        return decorator(service.run).call(service, params);
+        return dec(service.run).call(service, params);
     }
 
     async run(promise) {

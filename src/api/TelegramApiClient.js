@@ -1,13 +1,11 @@
 import Error from 'src/error';
 import { verbose } from 'lib/logger';
 import { dumpUpdate, dumpMessage } from 'src/utils';
+import config from 'config';
 import ApiClient from './ApiClient';
 
 export default @verbose class TelegramApiClient extends ApiClient {
-    async request() {
-        if (this.mock) return;
-        const response = await super.request(...arguments);
-
+    handleResponse(response) {
         if (!response.ok) throw response;
 
         return response.result;
@@ -28,7 +26,6 @@ export default @verbose class TelegramApiClient extends ApiClient {
     }
 
     async getUpdates(lastUpdate = 0) {
-        if (this.mock) return [];
         const data = await this.get('/getUpdates', {
             limit  : 10,
             offset : lastUpdate + 1
@@ -58,7 +55,8 @@ export default @verbose class TelegramApiClient extends ApiClient {
     async getWebhook() {
         const data = await this.get('/getWebhookInfo');
 
+        if (this.isMock) return config.updates.webhook;
+
         return data.url;
     }
 }
-

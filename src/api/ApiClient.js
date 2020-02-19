@@ -3,7 +3,7 @@ import axios from 'axios';
 import ms from 'ms';
 import Error from 'src/error';
 import { API_CLIENT_HTTP_ERRORS } from 'src/constants';
-import logger from 'lib/logger';
+import logger, { trackLogger } from 'lib/logger';
 import { resolveUrl } from 'src/utils';
 
 class ApiError extends Error {
@@ -30,6 +30,7 @@ export default class ApiClient {
         this.apiKey = apiKey;
         if (mock) {
             this.isMock = true;
+            this.log = trackLogger.log.bind(trackLogger, 'info');
         }
     }
 
@@ -53,7 +54,7 @@ export default class ApiClient {
 
         if (this.isMock) {
             if (this.log) {
-                this.log({ method, url, ...reqOptions });
+                this.log({ method, url, ...reqOptions, api: this.constructor.name });
             }
 
             return;

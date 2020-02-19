@@ -40,6 +40,7 @@
     "eslint-import-resolver-babel-module": "^5.1.2",
     "eslint-plugin-import": "^2.20.1",
     "jscpd": "^2.0.16",
+    "json-query": "^2.2.2",
     "lockfile-lint": "^3.0.18",
     "mocha": "^7.0.1",
     "nodemon": "^2.0.2",
@@ -66,6 +67,7 @@
     "ms": "^2.1.2",
     "myrmidon": "^1.1.0",
     "uuid": "^3.4.0",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "winston-array-transport": "^1.0.0"
   }
 }
