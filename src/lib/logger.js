@@ -1,11 +1,9 @@
 import path from 'path';
-import fs from 'fs';
 import { Decorator } from 'logger-decorator';
 import ArrayTransport from 'winston-array-transport';
 import { createLogger, format, transports } from 'winston';
 import { name } from 'package';
 import Error from 'src/error';
-
 
 /* eslint-disable camelcase */
 const { npm_config_loglevel, DEBUG, LOG_LEVEL, MODE, SILENT } = process.env;
@@ -73,6 +71,7 @@ if (TRACK_REQUESTS) {
         filename : path.resolve(process.cwd(), TRACK_REQUESTS)
     }));
 }
+
 export const trackLogger = createLogger({
     format : format.combine(
         format.timestamp(),

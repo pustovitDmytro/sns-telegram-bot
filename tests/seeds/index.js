@@ -1,12 +1,15 @@
 import awsConfirmation from './aws-confirmation';
+import awsEvents from './aws-events';
 import telegramUpdates from './telegram-updates';
 
 export {
     telegramUpdates,
-    awsConfirmation
+    awsConfirmation,
+    awsEvents
 };
 
 export default {
     telegramUpdates,
-    awsConfirmation
+    awsConfirmation,
+    awsEvents
 };

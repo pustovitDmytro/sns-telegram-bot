@@ -1,7 +1,7 @@
 import aes from 'lib/aes';
 import ServiceBase  from '../Base';
 
-export default class SessionsCheck extends ServiceBase {
+export default class TgSessionsCheck extends ServiceBase {
     static LOG_LEVEL = 'verbose'
 
     static rules = {
@@ -9,6 +9,12 @@ export default class SessionsCheck extends ServiceBase {
     };
 
     async execute({ token }) {
-        return { telegram: aes.decrypt(token) };
+        const decrypted = aes.decrypt(token);
+
+        return { telegram : {
+            chat      : decrypted.c,
+            user      : decrypted.u,
+            createdAt : decrypted.d
+        } };
     }
 }
