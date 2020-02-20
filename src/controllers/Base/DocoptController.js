@@ -1,10 +1,5 @@
-import path from 'path';
-import { isStream } from 'src/utils';
-import logger from 'src/logger';
-import LocalFs from 'src/fileSystem/Local';
+import logger from 'lib/logger';
 import Base from './BaseController';
-
-const localFs = new LocalFs({ tmpFolder: './tmp/docopt' });
 
 function docoptKey(key) {
     const patterns = [ /--(.+)/, /<(.+)>/ ];
@@ -47,15 +42,6 @@ export default class DocoptController extends Base {
         return data;
     }
 
-    static renderAsFile = async data => {
-        const extention = path.extname(data.stream.path);
-
-        const tmpFile = await localFs.streamToTmp(data.stream, extention);
-
-        logger.info(`saved to ${tmpFile}`);
-        logger.info('DONE');
-    }
-
     static renderAsExit = data => {
         const exitCode = data.status ? 0 : 1;
 
@@ -78,9 +64,7 @@ export default class DocoptController extends Base {
         });
 
         const data = await this.run(promise);
-        const render = isStream(data?.stream)
-            ? 'renderAsFile'
-            : 'renderAsJson';
+        const render = 'renderAsJson';
 
         DocoptController[render](data);
 

@@ -1,7 +1,7 @@
 import cors       from 'cors';
 import bodyParser from 'body-parser';
 
-module.exports = {
+export default {
     json : bodyParser.json({
         limit  : 1024 * 1024,
         verify : (req, res, buf) => {
