@@ -1,9 +1,12 @@
-import getToken from './get-token';
+import awsConfirmation from './aws-confirmation';
+import telegramUpdates from './telegram-updates';
 
 export {
-    getToken
+    telegramUpdates,
+    awsConfirmation
 };
 
 export default {
-    getToken
+    telegramUpdates,
+    awsConfirmation
 };

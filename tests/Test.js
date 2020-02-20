@@ -16,6 +16,14 @@ export class Test {
         return aes.decrypt(token);
     }
 
+    getToken() {
+        return aes.encrypt({
+            c : -389952175,
+            u : 238585617,
+            d : +new Date()
+        });
+    }
+
     async getTracks() {
         return trackedLogs;
     }

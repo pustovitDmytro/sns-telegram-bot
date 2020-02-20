@@ -23,7 +23,7 @@ export default class ExpressController extends Base {
         const { status, ...payload } = data;
 
         if (status === 1) {
-            req._context = payload; // eslint-disable-line no-param-reassign
+            req._context = { ...(req._context || {}), ...payload }; // eslint-disable-line no-param-reassign
 
             return next();
         }

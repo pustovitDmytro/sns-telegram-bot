@@ -3,7 +3,7 @@ export function health(req, res) {
 }
 
 export function router(routeTable, express, req, res) {
-    const requestType = req._context.type;
+    const requestType = req._context.aws;
     const service = routeTable[requestType];
     const runner = express.makeServiceRunner(service);
 

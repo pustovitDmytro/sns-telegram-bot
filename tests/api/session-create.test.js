@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { getToken } from 'seeds';
+import { telegramUpdates } from 'seeds';
 import request from '../request';
 import factory from '../Test';
 import { queries } from '../constants';
@@ -12,7 +12,7 @@ before(async () => {
 });
 
 test('Positive: on add to channel', async () => {
-    const payload = getToken[0];
+    const payload = telegramUpdates[0];
 
     await request
         .post('/api/v1/updates/test_webhook_url')
@@ -21,7 +21,6 @@ test('Positive: on add to channel', async () => {
         .expect('Content-Type', /json/)
         .expect(({ body }) => {
             assert.ok(body.status);
-            console.log('body: ', body);
         });
 
     const log = await findTrackLog(queries.tgSendMessage);

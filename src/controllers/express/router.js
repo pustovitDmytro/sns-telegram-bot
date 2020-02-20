@@ -15,6 +15,6 @@ if (useWebhook) {
     router.post(`/updates/${updates.webhook}`, telegram.update);
 }
 
-router.post('/sns/:token', sessions.checkAWS, sns.event);
+router.post('/sns/:token', sessions.check, sessions.checkAWS, sns.event);
 
 export default router;

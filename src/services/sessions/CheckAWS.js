@@ -5,13 +5,12 @@ export default class SessionsCheck extends ServiceBase {
     static LOG_LEVEL = 'verbose'
 
     static rules = {
-        body : [ 'required', 'any_object' ]
+        data : [ 'required', 'any_object' ]
     };
 
     async execute() {
         return {
-            service : 'aws',
-            type    : 'SnsSubscriptionConfirmation'
+            aws : 'SnsSubscriptionConfirmation'
         };
     }
 }

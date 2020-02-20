@@ -26,7 +26,9 @@ class ApiError extends Error {
 export default class ApiClient {
     constructor({ timeout = '3 minutes', url, mock, apiKey }) {
         this.timeout = ms(timeout);
-        this.url = new URL(url);
+        if (url) {
+            this.url = new URL(url);
+        }
         this.apiKey = apiKey;
         if (mock) {
             this.isMock = true;

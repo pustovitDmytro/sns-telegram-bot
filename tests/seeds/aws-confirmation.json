@@ -1,0 +1,12 @@
+{
+    "Type" : "SubscriptionConfirmation",
+    "MessageId" : "a4b9d4f5-1b3c-4161-b324-a368acc41984",
+    "Token" : "xmPoChg5EjuIcErB8jhXGkveLBTsB",
+    "TopicArn" : "5ASJ1KRCKUm8aVUi",
+    "Message" : "You have chosen to subscribe to the topic 5ASJ1KRCKUm8aVUi.\nTo confirm the subscription, visit the SubscribeURL included in this message.",
+    "SubscribeURL" : "https://sns.eu-central-1.amazonaws.com/?Action=ConfirmSubscription&TopicArn=5ASJ1KRCKUm8aVUi&Token=xmPoChg5EjuIcErB8jhXGkveLBTsB",
+    "Timestamp" : "2020-03-11T10:19:06.993Z",
+    "SignatureVersion" : "1",
+    "Signature" : "Pp34koavWLKw7jYKoD28oCGffmlOVSFMiJe70+sxyQTgIhNtgsBKq0NBoEldJZHKzte1Nl8W5D0k54x4RRI5Pj5gzwGepUB78MDX2bp5E3lakY/RODoEZAmpffFI1VoIn5grrfIBmLY6nx1gMidhv5dgCkgGCs8B5Lo37bbIrIn/7Rewdr0NPO1Lzu1FfZlIQ2pZ8xjwCJhb8HCXI6TI3aLGIYlTr59RVBjW3UsxhyJlhgPCWPp/0F62ljglWnK7bNh6K9MmTcX483EvOsFh5p1AdBuXtEe5v6JWvqFcml6z00tfTKpUVfyrBdRkirgVHSlFeCBRic244N5a00Vb8Q==",
+    "SigningCertURL" : "https://sns.eu-central-1.amazonaws.com/SimpleNotificationService-a86cb10b4e1f29c941702d737128f7b6.pem"
+}

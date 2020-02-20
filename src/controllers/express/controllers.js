@@ -17,21 +17,21 @@ export default express.buildController({
     sessions : {
         check : express.makeServiceRunner(
             sessions.Check,
-            req => ({
-                token : req.params.token
-            }),
+            undefined,
             undefined,
             ExpressController.renderAsSessionMiddlevare
         ),
         checkAWS : express.makeServiceRunner(
             sessions.CheckAWS,
-            undefined,
+            req => ({
+                data : req.body
+            }),
             undefined,
             ExpressController.renderAsSessionMiddlevare
         )
     },
     sns : {
-        event : router.bind(awsRouter, express)
+        event : router.bind(null, awsRouter, express)
     },
     telegram : {
         update : telegram.ProcessUpdate
