@@ -16,8 +16,6 @@ handlebars.registerHelper('appUrl', () => {
 });
 
 handlebars.registerHelper('datetime', (date) => {
-    console.log('date: ', date);
-
     return date.format('DD-MMM-YYYY HH:mm:ss');
 });
 

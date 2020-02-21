@@ -9,7 +9,7 @@
     "test:security": "npm run test:audit && npm run test:lock",
     "test:lint": "eslint src --ext js",
     "test:mocha": "mocha --config .mocharc.json tests/**/*.test.js",
-    "test:coverage": "nyc mocha $npm_package_config_MOCHA_OPTS",
+    "test:coverage": "nyc mocha --config .mocharc.json tests/**/*.test.js",
     "test": "npm run test:lint && npm run test:security && npm run test:coverage"
   },
   "repository": {
