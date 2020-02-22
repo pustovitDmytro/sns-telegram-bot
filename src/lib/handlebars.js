@@ -19,6 +19,10 @@ handlebars.registerHelper('datetime', (date) => {
     return date.format('DD-MMM-YYYY HH:mm:ss');
 });
 
+handlebars.registerHelper('link', (link, text) => {
+    return `<a href="${link}">${text}</a>`;
+});
+
 class Handlebars {
     constructor() {
         this.templates = {};

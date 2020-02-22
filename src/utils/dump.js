@@ -15,6 +15,7 @@ export function dumpCommand(text) {
     const args =  yargs
         .command('/url [<template>]', 'get url', { command: { default: 'url' } })
         .command('/help', 'help', { command: { default: 'help' } })
+        .command('/start', 'intro', { command: { default: 'start' } })
         .parse(text);
 
     delete args._;

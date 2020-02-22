@@ -13,3 +13,15 @@ export default {
     awsConfirmation,
     awsEvents
 };
+
+export function generateTgCommand(command) {
+    const tgCommand = telegramUpdates[1];
+
+    return {
+        ...tgCommand,
+        message : {
+            ...tgCommand.message,
+            text : command
+        }
+    };
+}
