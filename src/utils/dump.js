@@ -1,3 +1,5 @@
+import yargs from 'yargs';
+
 function formatDate(tgDate) {
     return (new Date(tgDate * 1000)).toISOString();
 }
@@ -7,6 +9,18 @@ export function dumpUpdate(update) {
         id      : update.update_id,
         message : dumpMessage(update.message)
     };
+}
+
+export function dumpCommand(text) {
+    const args =  yargs
+        .command('/url [<template>]', 'get url', { command: { default: 'url' } })
+        .command('/help', 'help', { command: { default: 'help' } })
+        .parse(text);
+
+    delete args._;
+    delete args.$0;
+
+    return args;
 }
 
 export function dumpMessage(message) {
@@ -19,16 +33,19 @@ export function dumpMessage(message) {
         from.forward = dumpSender(forward);
         from.forward.date = formatDate(message.forward_date);
     }
-    const type = message.text && 'TEXT'
-    || message.sticker && 'STICKER'
-    || message.new_chat_member && 'NEW_MEMBER';
+    const text = message.text && message.text.trim();
+    const type = message.sticker && 'STICKER'
+    || message.new_chat_member && 'NEW_MEMBER'
+    || text && text[0] === '/' && 'COMMAND'
+    || text && 'TEXT';
 
     return {
         id      : message.message_id,
         from,
         to,
         payload : {
-            TEXT       : message.text,
+            TEXT       : text,
+            COMMAND    : dumpCommand(text),
             STICKER    : dumpSticker(message.sticker),
             NEW_MEMBER : dumpSender(message.new_chat_member)
         }[type],

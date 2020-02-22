@@ -42,15 +42,35 @@ class Telegram {
             logger.verbose(`WEBHOOK_URL HAS BEEN ALREADY SET TO ${webhookUrl}`);
         }
     }
-    processUpdate = async update => {
-        const { type, payload, to, from } = update.message;
+    handleMessage(message) {
+        const { type, payload, to, from } = message;
         const isAddedToGroup = type === 'NEW_MEMBER' && payload.id === this._id;
 
         if (isAddedToGroup) {
             const token = aes.encrypt({ c: to.id, u: from.id, d: +new Date() });
-            const answer = handlebars.templates.telegram.urlSuccess({ token });
 
-            return this.sendMessage(to, answer);
+            return handlebars.templates.telegram.urlSuccess({ token });
+        }
+        const isCommand = type === 'COMMAND';
+
+        if (isCommand) {
+            if (payload.command === 'url') {
+                const token = aes.encrypt({ c: from.id, d: +new Date() });
+
+                return handlebars.templates.telegram.urlSuccess({ token });
+            }
+            if (payload.command === 'help') return handlebars.templates.telegram.help();
+            if (payload.command === 'start') return handlebars.templates.telegram.start();
+
+            return handlebars.templates.telegram.badCommand();
+        }
+    }
+
+    processUpdate = async update => {
+        const answer = this.handleMessage(update.message);
+
+        if (answer) {
+            await this.sendMessage(update.message.to, answer);
         }
     }
 

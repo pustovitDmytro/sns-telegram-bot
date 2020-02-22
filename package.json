@@ -7,7 +7,7 @@
     "test:lock": "lockfile-lint --path package-lock.json --allowed-hosts npm tgz.pm2.io --validate-https",
     "test:audit": "npm audit",
     "test:security": "npm run test:audit && npm run test:lock",
-    "test:lint": "eslint src --ext js",
+    "test:lint": "eslint src tests --ext js",
     "test:mocha": "mocha --config .mocharc.json tests/**/*.test.js",
     "test:coverage": "nyc mocha --config .mocharc.json tests/**/*.test.js",
     "test": "npm run test:lint && npm run test:security && npm run test:coverage"
@@ -69,6 +69,7 @@
     "myrmidon": "^1.1.0",
     "uuid": "^3.4.0",
     "winston": "^3.2.1",
-    "winston-array-transport": "^1.0.0"
+    "winston-array-transport": "^1.0.0",
+    "yargs": "^15.1.0"
   }
 }

@@ -1,43 +1,75 @@
-[{
-    "update_id": 990200836,
-    "message": {
-        "message_id": 29,
-        "from": {
-            "id": 238585617,
-            "is_bot": false,
-            "first_name": "Дмитро",
-            "last_name": "Пустовіт",
-            "username": "dimapustovit",
-            "language_code": "ru"
-        },
-        "chat": {
-            "id": -389952175,
-            "title": "smallest stove",
-            "type": "group",
-            "all_members_are_administrators": true
-        },
-        "date": 1581980648,
-        "new_chat_participant": {
-            "id": 982462515,
-            "is_bot": true,
-            "first_name": "sns_bot",
-            "username": "aws_sns_to_tg_bot"
-        },
-        "new_chat_member": {
-            "id": 982462515,
-            "is_bot": true,
-            "first_name": "sns_bot",
-            "username": "aws_sns_to_tg_bot"
-        },
-        "new_chat_members": [
-            [
+[
+    {
+        "update_id": 990200836,
+        "message": {
+            "message_id": 29,
+            "from": {
+                "id": 238585423,
+                "is_bot": false,
+                "first_name": "Дмитро",
+                "last_name": "Пустовіт",
+                "username": "dimapustovit",
+                "language_code": "ru"
+            },
+            "chat": {
+                "id": -389952175,
+                "title": "smallest stove",
+                "type": "group",
+                "all_members_are_administrators": true
+            },
+            "date": 1581980648,
+            "new_chat_participant": {
+                "id": 982462515,
+                "is_bot": true,
+                "first_name": "sns_bot",
+                "username": "aws_sns_to_tg_bot"
+            },
+            "new_chat_member": {
+                "id": 982462515,
+                "is_bot": true,
+                "first_name": "sns_bot",
+                "username": "aws_sns_to_tg_bot"
+            },
+            "new_chat_members": [
+                [
+                    {
+                        "id": 982462515,
+                        "is_bot": true,
+                        "first_name": "sns_bot",
+                        "username": "aws_sns_to_tg_bot"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "update_id": 1202130,
+        "message": {
+            "message_id": 34,
+            "from": {
+                "id": 238585617,
+                "is_bot": false,
+                "first_name": "Дмитро",
+                "last_name": "Пустовіт",
+                "username": "dimapustovit",
+                "language_code": "ru"
+            },
+            "chat": {
+                "id": 238585617,
+                "first_name": "Дмитро",
+                "last_name": "Пустовіт",
+                "username": "dimapustovit",
+                "type": "private"
+            },
+            "date": 1582314319,
+            "text": "/url",
+            "entities": [
                 {
-                    "id": 982462515,
-                    "is_bot": true,
-                    "first_name": "sns_bot",
-                    "username": "aws_sns_to_tg_bot"
+                    "offset": 0,
+                    "length": 4,
+                    "type": "bot_command"
                 }
             ]
-        ]
+        }
     }
-}]
+]

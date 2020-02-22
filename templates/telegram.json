@@ -1,3 +1,6 @@
 {
-    "urlSuccess": "Your url: {{appUrl}}/sns/{{token}}/"
+    "urlSuccess": "Your url: {{appUrl}}/sns/{{token}}/",
+    "start": "Intro",
+    "help": "?HELP",
+    "babCommand": "Wrong command, use /help to get me better"
 }
