@@ -20,7 +20,11 @@ handlebars.registerHelper('datetime', (date) => {
 });
 
 handlebars.registerHelper('link', (link, text) => {
-    return `<a href="${link}">${text}</a>`;
+    return new handlebars.SafeString(`<a href='${link}'>${text}</a>`);
+});
+
+handlebars.registerHelper('nl', () => {
+    return new handlebars.SafeString('&#10');
 });
 
 class Handlebars {

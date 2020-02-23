@@ -36,9 +36,10 @@ export default @verbose class TelegramApiClient extends ApiClient {
 
     async sendMessage(chatId, html) {
         const data = await this.post('/sendMessage', {
-            'parse_mode' : 'HTML',
-            'chat_id'    : chatId,
-            text         : html
+            'parse_mode'               : 'HTML',
+            'chat_id'                  : chatId,
+            text                       : html,
+            'disable_web_page_preview' : true
         });
 
         return dumpMessage(data);

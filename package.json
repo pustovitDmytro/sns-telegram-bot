@@ -67,6 +67,7 @@
     "luxon": "^1.22.0",
     "ms": "^2.1.2",
     "myrmidon": "^1.1.0",
+    "qs": "^6.9.1",
     "uuid": "^3.4.0",
     "winston": "^3.2.1",
     "winston-array-transport": "^1.0.0",

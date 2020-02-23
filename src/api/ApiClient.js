@@ -9,7 +9,7 @@ import { resolveUrl } from 'src/utils';
 class ApiError extends Error {
     constructor(httpError, opts) {
         const code = httpError.code || httpError.response.status;
-        const errCode = opts.HTTP_ERRORS[code] || opts.DEFAULT_ERROR;
+        const errCode = opts.HTTP_ERRORS?.[code] || opts.DEFAULT_ERROR;
 
         super(errCode, { code: opts.ERROR_CODE, httpError });
     }
@@ -18,7 +18,10 @@ class ApiError extends Error {
         return {
             error : this.render(),
             stack : this.stack,
-            http  : this.payload.httpError.toJSON()
+            http  : {
+                ...this.payload.httpError.toJSON(),
+                response : this.payload.httpError.response
+            }
         };
     }
 }
