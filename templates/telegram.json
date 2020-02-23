@@ -1,5 +1,5 @@
 {
-    "urlSuccess": "Your url: {{appUrl}}/sns/{{token}}/",
+    "urlSuccess": "Your url: {{apiUrl}}/sns/{{token}}/",
     "start": "I can help you to manage your SNS telegram subscriptions. I use AWS https endpoints under the hood. After you generate an endpoint, just add it to you SNS topics, and I'll do the rest.{{nl}}Check details in {{link 'https://docs.aws.amazon.com/sns/latest/dg/sns-tutorial-create-subscribe-endpoint-to-topic.html' 'official manual'}}. {{nl}}View source code in {{link 'https://github.com/pustovitDmytro/sns-telegram-bot' 'GitHub'}}{{nl}}{{nl}}Currently, I support the next commands:{{nl}}/url - generate endpoint for subscription",
     "help": "Currently, I support the next commands:{{nl}}/url - generate endpoint for subscription",
     "badCommand": "Wrong command, use /help to know me better"
