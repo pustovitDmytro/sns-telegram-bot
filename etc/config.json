@@ -1,6 +1,6 @@
 {
     "cipher": {
-        "algorithm" : "aes-256-ctr",
+        "algorithm" : "{{ALGORITHM}}",
         "key": "{{SECRET}}"
     },
     "bot": {

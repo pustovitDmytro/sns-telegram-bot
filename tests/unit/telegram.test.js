@@ -13,23 +13,20 @@ before(async () => {
 const [ addToChannel, getPrivateUrl ] = telegramUpdates.map(dumpUpdate);
 
 test('Positive: on add to channel', async () => {
-    // assert.equal(
-    //     telegram.handleMessage(addToChannel.message),
-    //     'Your url: http://localhost:8080/sns/hImxDoSMyHYYuVEKFv3sA7WdHao8mZg4o6JESHdgG8bsHkH2UaA8NySEJEF6jr6UJ/'
-    // );
+    assert.exists(
+        telegram.handleMessage(addToChannel.message),
+    );
 });
 
 test('Positive: get private url', async () => {
-    telegram.handleMessage(getPrivateUrl.message);
-    // assert.equal(
-    //     'Your url: http://localhost:8080/sns/hImxDoSMyHYYuVEKFv3sA7WdHao8mZg4o6JEXyf3nZL80QJEBZxxQHcMXNNqf5a1z/'
-    // );
+    assert.exists(
+        telegram.handleMessage(getPrivateUrl.message)
+    );
 });
 
-test.only('Positive: intro message', async () => {
-    console.log(telegram.handleMessage(dumpUpdate(generateTgCommand('/start')).message));
-    // assert.equal(
-    //     'Your url: http://localhost:8080/sns/hImxDoSMyHYYuVEKFv3sA7WdHao8mZg4o6JEXyf3nZL80QJEBZxxQHcMXNNqf5a1z/'
-    // );
+test('Positive: intro message', async () => {
+    assert.exists(
+        telegram.handleMessage(dumpUpdate(generateTgCommand('/start')).message)
+    );
 });
 

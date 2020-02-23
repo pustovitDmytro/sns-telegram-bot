@@ -1,6 +1,8 @@
 import crypto from 'crypto';
 import { cipher as cipherCongig } from 'src/config';
 
+const IV_LENGTH = 16;
+
 class AES {
     constructor({ algorithm, key }) {
         this.algorithm = algorithm;
@@ -8,17 +10,20 @@ class AES {
     }
 
     encrypt(text) {
-        const cipher = crypto.createCipher(this.algorithm, this.key);
+        const iv = crypto.randomBytes(IV_LENGTH);
+        const cipher = crypto.createCipheriv(this.algorithm, this.key, iv);
 
         let crypted = cipher.update(text, 'utf8', 'hex');
 
         crypted += cipher.final('hex');
 
-        return crypted;
+        return `${iv.toString('hex')}.${crypted}`;
     }
 
-    decrypt(encrypted) {
-        const decipher = crypto.createDecipher(this.algorithm, this.key);
+    decrypt(text) {
+        const [ iv, encrypted ] = text.split('.');
+        const vec = new Buffer.from(iv, 'hex');
+        const decipher = crypto.createDecipheriv(this.algorithm, this.key, vec);
 
         let dec = decipher.update(encrypted, 'hex', 'utf8');
 
@@ -61,7 +66,7 @@ class Cipher extends AES {
         ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
         ...'0123456789'
     ]
-    inAlphabet = [ ...'0123456789abcdef' ]
+    inAlphabet = [ ...'0123456789abcdef.' ]
 
     encrypt(payload) {
         const string = JSON.stringify(payload);

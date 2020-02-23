@@ -4,7 +4,7 @@
   "description": "",
   "main": "runner.js",
   "scripts": {
-    "test:lock": "lockfile-lint --path package-lock.json --allowed-hosts npm tgz.pm2.io --validate-https",
+    "test:lock": "lockfile-lint --path package-lock.json --validate-https",
     "test:audit": "npm audit",
     "test:security": "npm run test:audit && npm run test:lock",
     "test:lint": "eslint src tests --ext js",

@@ -10,14 +10,8 @@ export default class ServiceBase {
 
     sanitizeContext({ context }) {
         if (!context) return;
-        const sanitized = {};
 
-        if (context.user) sanitized.user = context.user.id;
-        if (context.file) sanitized.file = context.file.id;
-        if (context.labeling) sanitized.labeling = context.labeling;
-        if (context.ds) sanitized.ds = context.ds;
-
-        return sanitized;
+        return context;
     }
 
     sanitizeParams(params) {
@@ -25,10 +19,6 @@ export default class ServiceBase {
     }
 
     checkPermissions() {
-        if (this.constructor.isLabeling && !this.context.labeling) {
-            throw new Error('ACTION_NOT_PERMITTED');
-        }
-
         const required = this.constructor.permissions;
 
         if (!required) return;
