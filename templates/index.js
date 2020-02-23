@@ -1,7 +1,5 @@
-import alarms from './alarms';
-import telegram from './telegram';
-
-export default {
-    alarms,
-    telegram
+/* eslint-disable import/no-commonjs */
+module.exports = {
+    alarms   : require('./alarms'),
+    telegram : require('./telegram')
 };
