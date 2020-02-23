@@ -2,6 +2,9 @@ import awsConfirmation from './aws-confirmation';
 import awsEvents from './aws-events';
 import telegramUpdates from './telegram-updates';
 
+// for tests
+telegramUpdates[0].message.new_chat_member.id = +process.env.BOT_ID;
+
 export {
     telegramUpdates,
     awsConfirmation,
