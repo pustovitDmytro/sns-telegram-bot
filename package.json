@@ -4,6 +4,7 @@
   "description": "",
   "main": "runner.js",
   "scripts": {
+    "build": "babel src --out-dir ./build",
     "test:lock": "lockfile-lint --path package-lock.json --validate-https",
     "test:audit": "npm audit",
     "test:security": "npm run test:audit && npm run test:lock",

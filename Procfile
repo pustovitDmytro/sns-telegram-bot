@@ -1,1 +1,1 @@
-web: node runner.js
+web: node build/app.js
