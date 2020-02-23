@@ -6,6 +6,7 @@ import TelegramApiClient from 'src/api/TelegramApiClient';
 import Poll from 'lib/polling';
 import handlebars from 'lib/handlebars';
 import aes from 'lib/aes';
+import { version } from 'package';
 
 const isTest = process.env.MODE === 'test';
 
@@ -47,7 +48,7 @@ class Telegram {
         const isAddedToGroup = type === 'NEW_MEMBER' && payload.id === this._id;
 
         if (isAddedToGroup) {
-            const token = aes.encrypt({ c: to.id, u: from.id, d: +new Date() });
+            const token = aes.encrypt({ c: to.id, u: from.id, d: +new Date(), v: version });
 
             return handlebars.templates.telegram.urlSuccess({ token });
         }
@@ -55,7 +56,7 @@ class Telegram {
 
         if (isCommand) {
             if (payload.command === 'url') {
-                const token = aes.encrypt({ c: from.id, d: +new Date() });
+                const token = aes.encrypt({ c: from.id, d: +new Date(), v: version });
 
                 return handlebars.templates.telegram.urlSuccess({ token });
             }
