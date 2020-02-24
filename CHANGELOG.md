@@ -1,3 +1,14 @@
+# [1.2.0](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.1.1...v1.2.0) (2020-02-24)
+
+
+### Fix
+
+* resolveurl vith null base ([279ed14](https://github.com/pustovitDmytro/sns-telegram-bot/commit/279ed14a8e460552fd3423890e7cdbd7510eae43))
+
+### Update
+
+* adds base styling default alarm ([f3d3f57](https://github.com/pustovitDmytro/sns-telegram-bot/commit/f3d3f57e33a65c0c1d50191f74994e7b205e952b))
+
 ## [1.1.1](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.1.0...v1.1.1) (2020-02-24)
 
 
