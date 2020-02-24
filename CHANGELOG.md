@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.0.0...v1.0.1) (2020-02-24)
+
+
+### Fix
+
+* fixed api url prefix in templates ([8818859](https://github.com/pustovitDmytro/sns-telegram-bot/commit/8818859f002c6da29cf83f208bc827c2c8073762))
+* sns link with apiprefix ([4668334](https://github.com/pustovitDmytro/sns-telegram-bot/commit/4668334bb8b4a944afb88d4f1218a545925727ec))
+
 # 1.0.0 (2020-02-23)
 
 
