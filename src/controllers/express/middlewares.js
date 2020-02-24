@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 export default {
     json : bodyParser.json({
         limit  : 1024 * 1024,
+        type   : [ 'txt', 'json' ],
         verify : (req, res, buf) => {
             try {
                 JSON.parse(buf);
