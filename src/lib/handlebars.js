@@ -12,7 +12,7 @@ handlebars.registerHelper('lower', (string) => {
 });
 
 handlebars.registerHelper('appUrl', () => app.url);
-handlebars.registerHelper('apiUrl', () => `${app.url}${app.pref}`);
+handlebars.registerHelper('apiUrl', () => `${app.url}${app.prefix}`);
 
 handlebars.registerHelper('datetime', (date) => {
     return date.format('DD-MMM-YYYY HH:mm:ss');
