@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.1.0...v1.1.1) (2020-02-24)
+
+
+### Fix
+
+* defaultUrl to avoid nul url issue ([3443f4d](https://github.com/pustovitDmytro/sns-telegram-bot/commit/3443f4d4e5d899b32dc258046e61ff1fcd29f472))
+
 # [1.1.0](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.0.1...v1.1.0) (2020-02-24)
 
 
