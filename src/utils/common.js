@@ -25,14 +25,15 @@ export function getMethodDescriptor(propertyName, target) {
 }
 
 export function resolveUrl(base, relativeUrl) {
-    const baseUrl = new URL(base);
+    const baseUrl = base ? new URL(base) : undefined;
+
     const absoluteUrl = new URL(relativeUrl, baseUrl);
 
     if (absoluteUrl.href === relativeUrl) {
         return new URL(absoluteUrl,  baseUrl);
     }
 
-    const apiPrefix = baseUrl.pathname;
+    const apiPrefix = baseUrl?.pathname;
 
     const relPath = (apiPrefix && apiPrefix !== '/')
         ? apiPrefix + absoluteUrl.pathname
