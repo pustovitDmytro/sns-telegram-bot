@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.0.1...v1.1.0) (2020-02-24)
+
+
+### New
+
+* parse text/plain as json due to aws confirm letter issue ([cccc125](https://github.com/pustovitDmytro/sns-telegram-bot/commit/cccc125e27f6fb6e487a97fe738193368da0e8f8))
+
 ## [1.0.1](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.0.0...v1.0.1) (2020-02-24)
 
 
