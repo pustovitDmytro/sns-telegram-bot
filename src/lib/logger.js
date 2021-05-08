@@ -1,6 +1,4 @@
-import path from 'path';
 import { Decorator } from 'logger-decorator';
-import ArrayTransport from 'winston-array-transport';
 import { createLogger, format, transports } from 'winston';
 import { name } from 'package';
 import Error from 'src/error';
@@ -52,31 +50,3 @@ export const verbose = decorator({ level: 'verbose' });
 export const notice = decorator({ level: 'notice' });
 export const info = decorator({ level: 'info' });
 export const log = decorator({ level: 'info' });
-
-const trackTransports = [];
-
-export const trackedLogs = [];
-const { TRACK_REQUESTS, TRACK_REQUESTS_TO_STDOUT } = process.env;
-
-if (TRACK_REQUESTS_TO_STDOUT || isDebug) {
-    trackTransports.push(new transports.Console());
-}
-
-if (MODE === 'test') {
-    trackTransports.push(new ArrayTransport({ array: trackedLogs, json: true }));
-}
-
-if (TRACK_REQUESTS) {
-    trackTransports.push(new transports.File({
-        filename : path.resolve(process.cwd(), TRACK_REQUESTS)
-    }));
-}
-
-export const trackLogger = createLogger({
-    format : format.combine(
-        format.timestamp(),
-        format.json()
-    ),
-    transports : trackTransports
-});
-

@@ -1,5 +1,7 @@
+const httpSuccessCode = 200;
+
 export function health(req, res) {
-    res.sendStatus(200);
+    res.sendStatus(httpSuccessCode);
 }
 
 export function router(routeTable, express, req, res) {

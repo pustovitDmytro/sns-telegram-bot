@@ -1,7 +1,9 @@
 import yargs from 'yargs';
 
+const MS_IN_SEC = 1000;
+
 function formatDate(tgDate) {
-    return (new Date(tgDate * 1000)).toISOString();
+    return (new Date(tgDate * MS_IN_SEC)).toISOString();
 }
 
 export function dumpUpdate(update) {

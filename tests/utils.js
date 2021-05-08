@@ -12,7 +12,8 @@ export function extractUrls(text) {
 export async function findTrackLog(query) {
     const tracks = await factory.getTracks();
     const res = jsonQuery(query, {
-        data : tracks
+        data         : tracks,
+        enableRegexp : true
     });
 
     return res.value;

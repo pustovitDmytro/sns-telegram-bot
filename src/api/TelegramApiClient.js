@@ -1,8 +1,8 @@
+import ApiClient from 'base-api-client';
 import Error from 'src/error';
 import { verbose } from 'lib/logger';
 import { dumpUpdate, dumpMessage } from 'utils';
 import config from 'config';
-import ApiClient from './ApiClient';
 
 export default @verbose class TelegramApiClient extends ApiClient {
     handleResponse(response) {

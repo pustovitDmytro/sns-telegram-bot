@@ -1,8 +1,7 @@
 import AWSApiClient from 'src/api/AWSApiClient';
-import { isTest } from 'config';
 import ServiceBase from '../Base';
 
-const api = new AWSApiClient({ mock: isTest });
+const api = new AWSApiClient();
 
 export default class ConfirmSNS extends ServiceBase {
     static LOG_LEVEL = 'verbose'

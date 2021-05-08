@@ -1,9 +1,10 @@
 import path from 'path';
 import fse from 'fs-extra';
-import { trackedLogs } from 'lib/logger';
 import aes from 'lib/aes';
 import seeds from 'seeds';
 import { tmpFolder, entry } from './constants';
+import { mockAPI, unMockAPI, trackedLogs } from './mock';
+import './init-hooks';
 
 class Test {
     async cleanup() {
@@ -33,6 +34,10 @@ class Test {
     async cleanTmpFolder() {
         await fse.remove(tmpFolder);
     }
+
+    mockAPI = mockAPI
+
+    unMockAPI= unMockAPI
 }
 
 

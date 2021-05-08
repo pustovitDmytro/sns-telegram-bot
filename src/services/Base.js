@@ -34,14 +34,9 @@ export default class ServiceBase {
         await this.checkPermissions();
 
         const cleanParams = await this.validate(params);
+        const result = await this.execute(cleanParams);
 
-        try {
-            const result = await this.execute(cleanParams);
-
-            return result;
-        } catch (error) {
-            throw error;
-        }
+        return result;
     }
 
     validate(data) {

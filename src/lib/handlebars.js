@@ -3,8 +3,10 @@ import logger     from 'lib/logger';
 import TEMPLATES from 'templates';
 import { app } from 'config';
 
+const jsonIdentation = 4;
+
 handlebars.registerHelper('json', (object) => {
-    return JSON.stringify(object, null, 4);
+    return JSON.stringify(object, null, jsonIdentation);
 });
 
 handlebars.registerHelper('lower', (string) => {

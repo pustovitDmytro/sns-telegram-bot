@@ -9,6 +9,7 @@ suite('Confirm SNS Subscriptions');
 
 before(async () => {
     await factory.cleanup();
+    await factory.mockAPI();
 });
 
 test('Positive: confirm', async () => {
@@ -24,5 +25,10 @@ test('Positive: confirm', async () => {
     const log = await findTrackLog(queries.awsConfirm);
 
     assert.equal(log, awsConfirmation.SubscribeURL);
+});
+
+after(async () => {
+    await factory.cleanup();
+    await factory.unMockAPI();
 });
 

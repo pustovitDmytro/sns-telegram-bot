@@ -8,15 +8,11 @@ import handlebars from 'lib/handlebars';
 import aes from 'lib/aes';
 import { version } from 'package';
 
-const isTest = process.env.MODE === 'test';
-
 @log
 class Telegram {
     constructor({ bot, updates }) {
-        this.api = new TelegramApiClient({
-            timeout : '10s',
-            url     : `https://api.telegram.org/bot${bot.id}:${bot.token}`,
-            mock    : isTest
+        this.api = new TelegramApiClient(`https://api.telegram.org/bot${bot.id}:${bot.token}`, {
+            timeout : '10s'
         });
         this._init(updates);
         this._id = +bot.id;

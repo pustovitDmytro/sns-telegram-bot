@@ -1,6 +1,6 @@
 import { URL } from 'url';
+import ApiClient from 'base-api-client';
 import { verbose } from 'lib/logger';
-import ApiClient from './ApiClient';
 
 export default @verbose class AWSApiClient extends ApiClient {
     confirm(href) {
@@ -8,6 +8,6 @@ export default @verbose class AWSApiClient extends ApiClient {
 
         if (!url.origin.match(/https:\/\/sns\..*\.amazonaws\.com/)) throw new Error('FORBIDDEN');
 
-        return this.get(url);
+        return this.get(url.href);
     }
 }

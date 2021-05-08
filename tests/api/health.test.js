@@ -1,5 +1,6 @@
 import { assert } from 'chai';
 import request from '../request';
+import '../Test';
 
 suite('Health Check');
 

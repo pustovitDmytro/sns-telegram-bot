@@ -1,3 +1,4 @@
+/* eslint-disable censor/no-swear */
 import logger from 'lib/logger';
 import Base from './BaseController';
 

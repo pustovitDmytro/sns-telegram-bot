@@ -9,6 +9,7 @@ suite('Create Session');
 
 before(async () => {
     await factory.cleanup();
+    await factory.mockAPI();
 });
 
 test('Positive: on add to channel', async () => {
@@ -34,5 +35,10 @@ test('Positive: on add to channel', async () => {
         c : payload.message.chat.id,
         u : payload.message.from.id
     });
+});
+
+after(async () => {
+    await factory.cleanup();
+    await factory.unMockAPI();
 });
 
