@@ -2,6 +2,11 @@
     "extends": [
         "incredible"
     ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "legacyDecorators": true
+      }
+    },
     "settings": {
         "import/resolver": {
           "babel-module": {

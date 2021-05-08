@@ -12,7 +12,7 @@ export default class Poll {
                 await this.run();
                 this.start();
             } catch (error) {
-                logger.error(`POLLING_ERROR: ${error.message}`);
+                logger.error(`POLLING_ERROR: ${error.toString()}`);
                 this.start();
             }
         }, this.timeout);

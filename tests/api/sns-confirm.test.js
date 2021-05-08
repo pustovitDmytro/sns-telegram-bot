@@ -9,7 +9,6 @@ suite('Confirm SNS Subscriptions');
 
 before(async () => {
     await factory.cleanup();
-    await factory.mockAPI();
 });
 
 test('Positive: confirm', async () => {
@@ -29,6 +28,5 @@ test('Positive: confirm', async () => {
 
 after(async () => {
     await factory.cleanup();
-    await factory.unMockAPI();
 });
 

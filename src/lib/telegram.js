@@ -1,5 +1,6 @@
 // import { inspect } from 'util';
 import ms from 'ms';
+import { pause } from 'myrmidon';
 import config from 'config';
 import logger, { log } from 'lib/logger';
 import TelegramApiClient from 'src/api/TelegramApiClient';
@@ -8,8 +9,10 @@ import handlebars from 'lib/handlebars';
 import aes from 'lib/aes';
 import { version } from 'package';
 
+const waitUnitStartListen = 20;
+
 @log
-class Telegram {
+export class Telegram {
     constructor({ bot, updates }) {
         this.api = new TelegramApiClient(`https://api.telegram.org/bot${bot.id}:${bot.token}`, {
             timeout : '10s'
@@ -35,7 +38,9 @@ class Telegram {
     }
 
     async _initWebhook(webhookUrl) {
-        if (webhookUrl !== this.getWebhook()) {
+        await pause(waitUnitStartListen);
+
+        if (webhookUrl !== await this.getWebhook()) {
             await this.setWebhook(webhookUrl);
             logger.verbose(`WEBHOOK_URL SET TO ${webhookUrl}`);
         } else {

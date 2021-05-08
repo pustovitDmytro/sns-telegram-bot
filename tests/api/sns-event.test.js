@@ -9,7 +9,6 @@ suite('Receive SNS event');
 
 before(async () => {
     await factory.cleanup();
-    await factory.mockAPI();
 });
 
 test('Positive: receive event', async () => {
@@ -33,6 +32,5 @@ test('Positive: receive event', async () => {
 
 after(async () => {
     await factory.cleanup();
-    await factory.unMockAPI();
 });
 

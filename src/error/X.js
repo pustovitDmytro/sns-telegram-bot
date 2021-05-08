@@ -2,30 +2,19 @@ import { inspect } from 'util';
 import { UNKNOWN_ERROR_CODE, ERROR_CODES } from 'src/constants';
 
 export default class X extends Error {
-    #code;
-
     #payload;
 
-    constructor(code, data) {
+    constructor(payload) {
         super();
-        const actualErrorName = this.constructor.name;
 
-        this.name = actualErrorName === 'X'
-            ? code
-            : actualErrorName;
+        this.name = this.constructor.name;
+        this.#payload = payload;
 
         Error.captureStackTrace(this, this.constructor);
-
-        this.#code = code;
-        this.#payload = data;
-
-        if (data?.fields) {
-            this.fields = data.fields;
-        }
     }
 
     get payload() {
-        return  this.#payload;
+        return this.#payload;
     }
 
     static stringify(data) {
@@ -38,8 +27,8 @@ export default class X extends Error {
 
     render() {
         const error = {
-            code    : this.#payload?.code || ERROR_CODES[this.#code] ||  ERROR_CODES[UNKNOWN_ERROR_CODE],
-            message : this.#code
+            code    : this.code || ERROR_CODES[this.name] ||  ERROR_CODES[UNKNOWN_ERROR_CODE],
+            message : this.message
         };
 
         if (this.fields) {
@@ -54,11 +43,9 @@ export default class X extends Error {
             return error.render();
         }
 
-        const message = UNKNOWN_ERROR_CODE;
-
         return {
-            code : ERROR_CODES[message],
-            message
+            code    : ERROR_CODES.UNKNOWN_ERROR_CODE,
+            message : UNKNOWN_ERROR_CODE
         };
     }
 }

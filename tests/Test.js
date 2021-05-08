@@ -7,6 +7,10 @@ import { mockAPI, unMockAPI, trackedLogs } from './mock';
 import './init-hooks';
 
 class Test {
+    constructor() {
+        this.mockAPI();
+    }
+
     async cleanup() {
         trackedLogs.length = 0;
     }

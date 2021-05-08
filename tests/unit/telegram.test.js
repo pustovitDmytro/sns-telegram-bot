@@ -30,3 +30,6 @@ test('Positive: intro message', async () => {
     );
 });
 
+after(async () => {
+    await factory.cleanup();
+});

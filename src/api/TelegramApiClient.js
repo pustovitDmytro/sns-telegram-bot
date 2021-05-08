@@ -1,29 +1,20 @@
 import ApiClient from 'base-api-client';
-import Error from 'src/error';
+import API_ERROR from 'base-api-client/lib/Error';
+import { TG_ERROR } from 'src/error';
 import { verbose } from 'lib/logger';
 import { dumpUpdate, dumpMessage } from 'utils';
-import config from 'config';
 
 export default @verbose class TelegramApiClient extends ApiClient {
-    handleResponse(response) {
-        if (!response.ok) throw response;
+    onResponse({ data }) {
+        if (!data.ok) throw data;
 
-        return response.result;
+        return data.result;
     }
 
-    throwApiError(httpError, message) {
-        const isHttpError = !!httpError.isAxiosError;
+    onError(httpError) {
+        const apiError =  new API_ERROR(httpError);
 
-        if (isHttpError) return super.throwApiError(httpError);
-
-        const error = new Error('INTERNAL_TELEGRAM_ERROR', {
-            httpError,
-            code : this.ERROR_CODE
-        });
-
-        error.message = message || JSON.stringify(httpError);
-
-        throw error;
+        throw new TG_ERROR(apiError);
     }
 
     async getUpdates(lastUpdate = 0) {
@@ -56,8 +47,6 @@ export default @verbose class TelegramApiClient extends ApiClient {
 
     async getWebhook() {
         const data = await this.get('/getWebhookInfo');
-
-        if (this.isMock) return config.updates.webhook;
 
         return data.url;
     }

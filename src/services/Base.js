@@ -1,5 +1,5 @@
 import LIVR from 'livr';
-import Error from 'src/error';
+import { ACTION_NOT_PERMITTED, VALIDATION_FAILED } from 'src/error';
 
 export default class ServiceBase {
     static LOG_LEVEL = 'info'
@@ -26,7 +26,7 @@ export default class ServiceBase {
         const notAllowed = !user || !user.permissions?.isAllowed(required);
 
         if (notAllowed) {
-            throw new Error('ACTION_NOT_PERMITTED');
+            throw new ACTION_NOT_PERMITTED();
         }
     }
 
@@ -55,7 +55,7 @@ export default class ServiceBase {
         if (!result) {
             const fields = validator.getErrors();
 
-            throw new Error('VALIDATION_FAILED', { fields });
+            throw new VALIDATION_FAILED(fields);
         }
 
         return result;

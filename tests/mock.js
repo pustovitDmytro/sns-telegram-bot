@@ -1,6 +1,6 @@
 /* eslint-disable security/detect-object-injection */
-// import API_ERROR from 'base-api-client/lib/Error';
 import path from 'path';
+import API_ERROR from 'base-api-client/lib/Error';
 import { getNamespace } from 'cls-hooked';
 import ArrayTransport from 'winston-array-transport';
 import { createLogger, format, transports } from 'winston';
@@ -44,13 +44,13 @@ function axiosResponse(data) {
     return { data };
 }
 
-// function axiosError(message, data) {
-//     const err = new Error(message);
+function axiosError(message, data) {
+    const err = new Error(message);
 
-//     err.response = { data };
+    err.response = { data };
 
-//     return new API_ERROR(err);
-// }
+    return new API_ERROR(err);
+}
 
 
 class MockAWSApiClient extends AWSApiClient {
@@ -68,8 +68,21 @@ class MockAWSApiClient extends AWSApiClient {
 }
 
 class MockTelegramApiClient extends TelegramApiClient {
-    async _axios() {
-        return axiosResponse();
+    async _axios(opts) {
+        if (opts.method === 'GET' && opts.url.match('/getUpdates')) {
+            if (this.url.pathname.match('bad_poll')) {
+                throw axiosError('401', { ok: 0 });
+            }
+
+            return axiosResponse({ ok: true, result: [] });
+        }
+
+        if (opts.method === 'GET' && opts.url.match('/getWebhookInfo')) {
+            return axiosResponse({ ok: true, result: { url: 'test_webhook_url' } });
+        }
+
+
+        return axiosResponse({ ok: true });
     }
 
     log() {
@@ -77,7 +90,14 @@ class MockTelegramApiClient extends TelegramApiClient {
     }
 
     getTraceId() {
-        return getNamespace('__TEST__').get('current').id;
+        const context = getNamespace('__TEST__').get('current');
+
+        if (context) return context.id;
+
+        const [ , botId ] = this.url.pathname.split(/\W/);
+        const prefix = 'bot';
+
+        return botId.substring(prefix.length);
     }
 }
 
