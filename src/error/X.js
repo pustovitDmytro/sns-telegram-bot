@@ -3,6 +3,7 @@ import { UNKNOWN_ERROR_CODE, ERROR_CODES } from 'src/constants';
 
 export default class X extends Error {
     #code;
+
     #payload;
 
     constructor(code, data) {
@@ -52,6 +53,7 @@ export default class X extends Error {
         if (error instanceof X) {
             return error.render();
         }
+
         const message = UNKNOWN_ERROR_CODE;
 
         return {

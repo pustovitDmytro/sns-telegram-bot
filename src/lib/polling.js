@@ -5,6 +5,7 @@ export default class Poll {
         this.timeout = timeout;
         this.run = run;
     }
+
     async start() {
         setTimeout(async () => {
             try {

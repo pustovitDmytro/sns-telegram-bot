@@ -1,4 +1,4 @@
-import { dumpUpdate } from 'utils/dump';
+import { dumpUpdate } from 'src/utils/dump';
 import telegram from 'lib/telegram';
 import Base from '../Base';
 

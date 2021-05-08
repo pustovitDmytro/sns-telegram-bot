@@ -34,6 +34,7 @@ export function dumpMessage(message) {
         from.forward = dumpSender(forward);
         from.forward.date = formatDate(message.forward_date);
     }
+
     const text = message.text && message.text.trim();
     const type = message.sticker && 'STICKER'
     || message.new_chat_member && 'NEW_MEMBER'

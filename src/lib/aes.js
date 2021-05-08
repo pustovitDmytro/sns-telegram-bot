@@ -66,6 +66,7 @@ class Cipher extends AES {
         ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
         ...'0123456789'
     ]
+
     inAlphabet = [ ...'0123456789abcdef.' ]
 
     encrypt(payload) {
@@ -85,6 +86,7 @@ class Cipher extends AES {
     short(hex) {
         return toSymbols(toNumber(hex, this.inAlphabet), this.outAlphabet).join('');
     }
+
     long(text) {
         return toSymbols(toNumber(text, this.outAlphabet), this.inAlphabet).join('');
     }

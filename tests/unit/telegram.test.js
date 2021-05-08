@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import { telegramUpdates, generateTgCommand } from 'seeds';
 import telegram from 'lib/telegram';
-import { dumpUpdate } from 'src/utils';
+import { dumpUpdate } from 'src/utils/dump';
 import factory from '../Test';
 
 suite('Telegram handle message');
@@ -14,7 +14,7 @@ const [ addToChannel, getPrivateUrl ] = telegramUpdates.map(dumpUpdate);
 
 test('Positive: on add to channel', async () => {
     assert.exists(
-        telegram.handleMessage(addToChannel.message),
+        telegram.handleMessage(addToChannel.message)
     );
 });
 

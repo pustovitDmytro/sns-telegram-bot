@@ -6,5 +6,6 @@ const config = confme(
 );
 
 config.isTest = process.env.MODE === 'test';
-module.exports = config; // eslint-disable-line import/no-commonjs
 
+export default config;
+module.exports = config; // eslint-disable-line import/no-commonjs

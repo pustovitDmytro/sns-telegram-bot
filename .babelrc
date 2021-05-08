@@ -1,41 +1,41 @@
 {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "current"
-          }
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
         }
-      ]
-    ],
-    "plugins": [
-      [
-        "@babel/plugin-proposal-decorators",
-        {
-          "legacy": true
-        }
-      ],
-      [
-        "module-resolver",
-        {
-          "alias": {
-            "config": "./src/config.js",
-            "src": "./src",
-            "lib": "./src/lib",
-            "tests": "./tests",
-            "utils": "./src/utils",
-            "seeds": "./tests/seeds",
-            "templates": "./templates",
-            "package": "./package.json"
-          }
-        }
-      ],
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-optional-chaining"
-    ],
-    "ignore": [
-      "node_modules"
+      }
     ]
-  }
-  
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+         "legacy": true
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": "./src/",
+        "alias": {
+          "config": "./src/config.js",
+          "src": "./src",
+          "lib": "./src/lib",
+          "tests": "./tests",
+          "utils": "./src/utils/index.js",
+          "seeds": "./tests/seeds",
+          "templates": "./templates",
+          "package": "./package.json"
+        }
+      }
+    ],
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-optional-chaining"
+  ],
+  "ignore": [
+    "node_modules"
+  ]
+}

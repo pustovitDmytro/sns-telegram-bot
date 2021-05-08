@@ -1,6 +1,6 @@
 import Error from 'src/error';
 import { verbose } from 'lib/logger';
-import { dumpUpdate, dumpMessage } from 'src/utils';
+import { dumpUpdate, dumpMessage } from 'utils';
 import config from 'config';
 import ApiClient from './ApiClient';
 
@@ -10,6 +10,7 @@ export default @verbose class TelegramApiClient extends ApiClient {
 
         return response.result;
     }
+
     throwApiError(httpError, message) {
         const isHttpError = !!httpError.isAxiosError;
 

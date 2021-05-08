@@ -32,7 +32,9 @@ export function docoptParams(opts, { include, exclude } = {}) {
 
 export default class DocoptController extends Base {
     static paramsBuilder = opts => docoptParams(opts, { exclude: [ 'confirm', 'verbose', 'quiet' ] })
+
     static contexBuilder = opts => opts.context || opts['--context'] && JSON.parse(opts['--context'])
+
     static optionsBuilder = opts => docoptParams(opts, { include: [ 'confirm', 'verbose', 'quiet' ] })
 
     static renderAsJson = data => {

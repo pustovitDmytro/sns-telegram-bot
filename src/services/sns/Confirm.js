@@ -6,6 +6,7 @@ const api = new AWSApiClient({ mock: isTest });
 
 export default class ConfirmSNS extends ServiceBase {
     static LOG_LEVEL = 'verbose'
+
     static rules = {
         'Type'         : [ 'required', { eq: 'SubscriptionConfirmation' } ],
         'MessageId'    : [ 'required', 'uuid' ],

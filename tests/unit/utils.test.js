@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { dumpCommand, resolveUrl } from 'src/utils';
+import { dumpCommand, resolveUrl } from 'utils';
 import factory from '../Test';
 
 suite('Utils');

@@ -21,10 +21,12 @@ class Telegram {
         this._init(updates);
         this._id = +bot.id;
     }
+
     async _init({ mode, interval, webhook }) {
         if (mode === 'polling') this._initPolling(interval);
         if (mode === 'webhook') await this._initWebhook(`${config.app.url}${config.app.prefix}/updates/${webhook}`);
     }
+
     _initPolling(pollingTime) {
         this.pollTimeout = ms(pollingTime);
         const poll = new Poll({
@@ -35,6 +37,7 @@ class Telegram {
         poll.start();
         logger.verbose(`POLLING STARTED WITH INTERVAL ${pollingTime}`);
     }
+
     async _initWebhook(webhookUrl) {
         if (webhookUrl !== this.getWebhook()) {
             await this.setWebhook(webhookUrl);
@@ -43,6 +46,7 @@ class Telegram {
             logger.verbose(`WEBHOOK_URL HAS BEEN ALREADY SET TO ${webhookUrl}`);
         }
     }
+
     handleMessage(message) {
         const { type, payload, to, from } = message;
         const isAddedToGroup = type === 'NEW_MEMBER' && payload.id === this._id;
@@ -52,6 +56,7 @@ class Telegram {
 
             return handlebars.templates.telegram.urlSuccess({ token });
         }
+
         const isCommand = type === 'COMMAND';
 
         if (isCommand) {
@@ -60,6 +65,7 @@ class Telegram {
 
                 return handlebars.templates.telegram.urlSuccess({ token });
             }
+
             if (payload.command === 'help') return handlebars.templates.telegram.help();
             if (payload.command === 'start') return handlebars.templates.telegram.start();
 
@@ -88,9 +94,11 @@ class Telegram {
     sendMessage(chat, message) {
         return this.api.sendMessage(chat.id, message);
     }
+
     setWebhook(url) {
         return this.api.setWebhook(url);
     }
+
     getWebhook() {
         return this.api.getWebhook();
     }

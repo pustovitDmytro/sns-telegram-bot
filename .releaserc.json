@@ -1,4 +1,5 @@
 {
+    "branches": ["master"],
     "branch": "master",
     "ci": false,
     "plugins": [
@@ -10,25 +11,45 @@
             }
         ],
         [
-            "@semantic-release/npm", {
+            "@semantic-release/npm",{
                 "npmPublish": false
             }
         ],
         [
             "@semantic-release/git", {
-                "message": "Release: (release) add version ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+                "assets": ["README.md", "CHANGELOG.md", "package.json"],
+                "message": "Chore: (release) add version ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
             }
+        ],
+        [ 
+            "semantic-release-heroku", {
+                "tarballDir": "./",
+                "name": "sns-telegram"
+            } 
+        ],
+        [
+            "@semantic-release/github", {
+                "assets": [
+                    { "path": "*.tgz", "label": "heroku tarball" }
+                ]
+            }
+        ],
+        [ 
+            "semantic-release-telegram", {
+                "chats": [ 238585617 ]
+            } 
         ]
     ],
     "preset": "eslint",
     "releaseRules": [
-        { "type": "Fix", "release": "patch" },
-        { "type": "Update", "release": "minor" },
-        { "type": "New", "release": "minor" },
-        { "type": "Docs", "release": "minor" },
-        { "type": "Upgrade", "release": "patch" }
+        { "tag": "Fix", "release": "patch" },
+        { "tag": "Update", "release": "minor" },
+        { "tag": "New", "release": "minor" },
+        { "tag": "Breaking", "release": "major" },
+        { "tag": "Docs", "release": "patch" },
+        { "tag": "Upgrade", "release": "patch" }
     ],
     "parserOpts": {
-        "noteKeywords": ["BREAKING"]
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
     }
 }

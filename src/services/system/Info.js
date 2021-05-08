@@ -3,6 +3,7 @@ import ServiceBase from '../Base';
 
 export default class SystemInfo extends ServiceBase {
     static LOG_LEVEL = 'verbose'
+
     static rules = {};
 
     async execute() {

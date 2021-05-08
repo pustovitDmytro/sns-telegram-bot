@@ -1,13 +1,11 @@
-// import fse from 'fs-extra';
+import path from 'path';
+import fse from 'fs-extra';
 import { trackedLogs } from 'lib/logger';
 import aes from 'lib/aes';
 import seeds from 'seeds';
+import { tmpFolder, entry } from './constants';
 
-export {
-    seeds
-};
-
-export class Test {
+class Test {
     async cleanup() {
         trackedLogs.length = 0;
     }
@@ -27,6 +25,32 @@ export class Test {
     async getTracks() {
         return trackedLogs;
     }
+
+    async setTmpFolder() {
+        await fse.ensureDir(tmpFolder);
+    }
+
+    async cleanTmpFolder() {
+        await fse.remove(tmpFolder);
+    }
+}
+
+
+function load(relPath) {
+    // eslint-disable-next-line security/detect-non-literal-require
+    return require(path.join(entry, relPath));
+}
+
+function resolve(relPath) {
+    return require.resolve(path.join(entry, relPath));
 }
 
 export default new Test();
+
+export {
+    tmpFolder,
+    entry,
+    load,
+    resolve,
+    seeds
+};

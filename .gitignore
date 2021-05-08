@@ -1,6 +1,12 @@
-node_modules/*
-logs/*
+node_modules
+etc/*.js
+etc/*.json
+lib/*
 tmp/*
-.env
+logs/*
+*.log
+*.tgz
 reports/*
+.coveralls.yml
+.env
 build/*
