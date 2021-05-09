@@ -10,11 +10,6 @@
                 "changelogFile": "CHANGELOG.md"
             }
         ],
-        [ 
-            "semantic-release-telegram", {
-                "chats": [ 238585617 ]
-            } 
-        ],
         [
             "@semantic-release/npm",{
                 "npmPublish": false
@@ -38,6 +33,11 @@
                     { "path": "*.tgz", "label": "heroku tarball" }
                 ]
             }
+        ],
+        [ 
+            "semantic-release-telegram", {
+                "chats": [ 238585617 ]
+            } 
         ]
     ],
     "preset": "eslint",
