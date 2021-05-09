@@ -1,8 +1,9 @@
 import { assert } from 'chai';
 import { telegramUpdates, generateTgCommand } from 'seeds';
-import telegram from 'lib/telegram';
 import { dumpUpdate } from 'src/utils/dump';
-import factory from '../Test';
+import factory, { load } from '../Test';
+
+const telegram = load('lib/telegram').default;
 
 suite('Telegram handle message');
 

@@ -1,5 +1,7 @@
 import supertest from 'supertest';
-import nodeApp from 'src/app';
+import { load } from './Test';
+
+const nodeApp = load('app').default;
 
 supertest.agent(nodeApp);
 

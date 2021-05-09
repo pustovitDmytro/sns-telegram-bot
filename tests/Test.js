@@ -6,9 +6,10 @@ import { tmpFolder, entry } from './constants';
 import { mockAPI, unMockAPI, trackedLogs } from './mock';
 import './init-hooks';
 
+mockAPI();
+
 class Test {
     constructor() {
-        this.mockAPI();
     }
 
     async cleanup() {
