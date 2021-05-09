@@ -1,3 +1,16 @@
+## [1.3.1](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.0...v1.3.1) (2021-05-09)
+
+
+### Chore
+
+* drop unused dependencies ([92ea32e](https://github.com/pustovitDmytro/sns-telegram-bot/commit/92ea32eee155d0aad3e810d2abd8e93ebaaf8a6d))
+* reinstall modules ([aa45b08](https://github.com/pustovitDmytro/sns-telegram-bot/commit/aa45b0854e4939184abdf96016e48ee9c6177548))
+* Remove npm-related badges ([207aa23](https://github.com/pustovitDmytro/sns-telegram-bot/commit/207aa234f16e21c722dd9c13ffd73cd76d8e6174))
+
+### Docs
+
+* added apidoc ([1121ff4](https://github.com/pustovitDmytro/sns-telegram-bot/commit/1121ff4fa0e7b98292d218d5ed9861da0e10c3ac))
+
 # [1.3.0](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.2.0...v1.3.0) (2021-05-09)
 
 
