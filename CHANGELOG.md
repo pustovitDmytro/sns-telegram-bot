@@ -1,3 +1,15 @@
+## [1.3.2](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.1...v1.3.2) (2021-05-09)
+
+
+### Chore
+
+* Update dependency fs-extra to v10 ([01f850a](https://github.com/pustovitDmytro/sns-telegram-bot/commit/01f850ad2622a6dc318ef27506131e329753eb99))
+
+### Upgrade
+
+* Update dependency dotenv to v9 ([21834a0](https://github.com/pustovitDmytro/sns-telegram-bot/commit/21834a08ea45f241ce856872efa3c020d2ee1c6e))
+* Update dependency yargs to v17 ([b426371](https://github.com/pustovitDmytro/sns-telegram-bot/commit/b4263717fd48d6ad85a46cab58fdea121eba4e69))
+
 ## [1.3.1](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.0...v1.3.1) (2021-05-09)
 
 
