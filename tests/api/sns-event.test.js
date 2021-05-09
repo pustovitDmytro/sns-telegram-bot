@@ -11,10 +11,11 @@ before(async () => {
     await factory.cleanup();
 });
 
-test('Positive: receive event', async () => {
+test('Positive: receive event', async function () {
     const token = factory.getToken();
 
     await request
+        .with(this)
         .post(`/api/v1/sns/${token}`)
         .send(awsEvents[0])
         .expect(200)

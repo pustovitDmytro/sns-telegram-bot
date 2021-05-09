@@ -11,9 +11,11 @@ const entry = process.env.ENTRY && path.resolve(process.env.ENTRY)
 || path.resolve(__dirname, '../src');
 
 const tmpFolder = path.join(__dirname, '../tmp/tests');
+const isDocumentation = [ '1', 'true' ].includes(process.env.DOCUMENTATION);
 
 export {
     tmpFolder,
     entry,
-    queries
+    queries,
+    isDocumentation
 };

@@ -1,8 +1,6 @@
-import supertest from 'supertest';
+import { supertest } from 'rest-chronicle';
 import { load } from './Test';
 
 const nodeApp = load('app').default;
 
-supertest.agent(nodeApp);
-
-export default supertest.agent(nodeApp);
+export default supertest(nodeApp);

@@ -11,8 +11,9 @@ before(async () => {
     await factory.cleanup();
 });
 
-test('Positive: confirm', async () => {
+test('Positive: confirm', async function () {
     await request
+        .with(this)
         .post(`/api/v1/sns/${factory.getToken()}`)
         .send(awsConfirmation)
         .expect(200)

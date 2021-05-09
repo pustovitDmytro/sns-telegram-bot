@@ -1,5 +1,7 @@
 import { v4 as uuid } from 'uuid';
 import { createNamespace } from 'cls-hooked';
+import chronicle from 'rest-chronicle';
+import { isDocumentation } from './constants';
 
 const context = createNamespace('__TEST__');
 
@@ -23,3 +25,31 @@ beforeEach(function setClsFromContext() {
         });
     };
 });
+
+if (isDocumentation) {
+    before(async function () {
+        function contextBuilder({ test }) {
+            return {
+                title : test.title,
+                group : test.parent.title
+            };
+        }
+
+        chronicle.setContextBuilder(contextBuilder);
+        chronicle.setConfig({
+            headers : {
+                request : {
+                    include : [ ]
+                },
+                response : {
+                    include : []
+                }
+            }
+        });
+    });
+
+    after(async function () {
+        await chronicle.save('./docs/api-blueprint.md', { reporter: 'api-blueprint' });
+        await chronicle.save('./docs/swagger.json', { reporter: 'swagger' });
+    });
+}

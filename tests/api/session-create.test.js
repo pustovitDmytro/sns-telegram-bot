@@ -11,10 +11,11 @@ before(async () => {
     await factory.cleanup();
 });
 
-test('Positive: on add to channel', async () => {
+test('Positive: on add to channel', async function () {
     const payload = telegramUpdates[0];
 
     await request
+        .with(this)
         .post('/api/v1/updates/test_webhook_url')
         .send(payload)
         .expect(200)

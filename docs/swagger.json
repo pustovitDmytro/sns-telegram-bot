@@ -1,0 +1,208 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Swagger Report"
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:37427"
+        },
+        {
+            "url": "http://127.0.0.1:40067"
+        },
+        {
+            "url": "http://127.0.0.1:33927"
+        },
+        {
+            "url": "http://127.0.0.1:36629"
+        },
+        {
+            "url": "http://127.0.0.1:46853"
+        },
+        {
+            "url": "http://127.0.0.1:44379"
+        }
+    ],
+    "paths": {
+        "/api/v1/agewash": {
+            "get": {
+                "tags": [
+                    "Health Check"
+                ],
+                "description": "Negative: Bad Route",
+                "parameters": [],
+                "responses": {
+                    "404": {
+                        "description": "Negative: Bad Route",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "example": {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/health": {
+            "get": {
+                "tags": [
+                    "Health Check"
+                ],
+                "description": "Positive: Health Check",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Positive: Health Check",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "example": {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/info": {
+            "get": {
+                "tags": [
+                    "Health Check"
+                ],
+                "description": "Positive: Get app info",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Positive: Get app info",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "example": {
+                                        "app": "sns-telegram-bot",
+                                        "version": "1.2.0",
+                                        "description": "Telegram transport for SNS notifications",
+                                        "status": 1
+                                    },
+                                    "properties": {
+                                        "app": {
+                                            "type": "string",
+                                            "example": "sns-telegram-bot"
+                                        },
+                                        "version": {
+                                            "type": "string",
+                                            "example": "1.2.0"
+                                        },
+                                        "description": {
+                                            "type": "string",
+                                            "example": "Telegram transport for SNS notifications"
+                                        },
+                                        "status": {
+                                            "type": "number",
+                                            "example": 1
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/updates/test_webhook_url": {
+            "post": {
+                "tags": [
+                    "Create Session"
+                ],
+                "description": "Positive: on add to channel",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Positive: on add to channel",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "example": {
+                                        "status": 1
+                                    },
+                                    "properties": {
+                                        "status": {
+                                            "type": "number",
+                                            "example": 1
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/sns/gDXvh1KU5GnHKgf12GvAt94I5PvxtpbaKqJOeC9zgUBldBRBAX9CcYTNHtKaUXz3gLd7oJJtzeKdOC4bbRmKBfrPN": {
+            "post": {
+                "tags": [
+                    "Confirm SNS Subscriptions"
+                ],
+                "description": "Positive: confirm",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Positive: confirm",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "example": {
+                                        "status": 1
+                                    },
+                                    "properties": {
+                                        "status": {
+                                            "type": "number",
+                                            "example": 1
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/sns/cS7mrFdslAl6M2ZVPRTqlhbpDDRgX9b70yEOIABnlBeTmCSNndNlHgtL63jz21bKKvjS14k0xp3D38gBcnQT85YZZ": {
+            "post": {
+                "tags": [
+                    "Receive SNS event"
+                ],
+                "description": "Positive: receive event",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Positive: receive event",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "example": {
+                                        "status": 1
+                                    },
+                                    "properties": {
+                                        "status": {
+                                            "type": "number",
+                                            "example": 1
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

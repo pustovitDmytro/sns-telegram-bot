@@ -6,6 +6,7 @@
   "scripts": {
     "prepare": "babel src --out-dir ./lib --copy-files && husky install",
     "coveralls": "cat ./reports/coverage/lcov.info | coveralls",
+    "documentate": "DOCUMENTATION=1 npm run test:mocha",
     "test:security": "npm audit && npm run test:lock",
     "test:lint": "eslint src bin tests",
     "test:mocha": "mocha  --config .mocharc.json tests/**/*test.js",
@@ -74,6 +75,7 @@
     "nodemon": "^2.0.2",
     "nyc": "^15.0.0",
     "pm2": "^4.2.3",
+    "rest-chronicle": "file:../rest-chronicle",
     "rollup": "^2.47.0",
     "semantic-release": "^17.0.4",
     "semantic-release-heroku": "^1.1.7",
