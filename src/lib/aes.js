@@ -2,6 +2,14 @@ import crypto from 'crypto';
 import { cipher as cipherCongig } from 'src/config';
 
 const IV_LENGTH = 16;
+const HEX_MULTIPLIER = 2;
+const IV_STRING_LENGTH = HEX_MULTIPLIER * IV_LENGTH;
+
+function pad(num, size) {
+    const zeros = (new Array(size)).fill('0').join('');
+
+    return (`${zeros}${num}`).substr(-size);
+}
 
 class AES {
     constructor({ algorithm, key }) {
@@ -16,13 +24,15 @@ class AES {
         let crypted = cipher.update(text, 'utf8', 'hex');
 
         crypted += cipher.final('hex');
+        const ivString = iv.toString('hex');
 
-        return `${iv.toString('hex')}.${crypted}`;
+        return `${ivString}.${crypted}`;
     }
 
     decrypt(text) {
         const [ iv, encrypted ] = text.split('.');
-        const vec = new Buffer.from(iv, 'hex');
+        const ivString = pad(iv, IV_STRING_LENGTH);
+        const vec = new Buffer.from(ivString, 'hex');
         const decipher = crypto.createDecipheriv(this.algorithm, this.key, vec);
 
         let dec = decipher.update(encrypted, 'hex', 'utf8');
