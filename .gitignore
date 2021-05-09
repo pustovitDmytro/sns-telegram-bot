@@ -10,3 +10,4 @@ reports/*
 .coveralls.yml
 .env
 build/*
+*tar
