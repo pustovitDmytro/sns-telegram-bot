@@ -31,7 +31,7 @@ export default class ServiceBase {
     }
 
     async run(params) {
-        await this.checkPermissions();
+        this.checkPermissions();
 
         const cleanParams = await this.validate(params);
         const result = await this.execute(cleanParams);

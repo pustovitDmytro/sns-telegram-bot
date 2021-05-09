@@ -1,10 +1,6 @@
 # sns-telegram-bot
 Telegram transport for SNS notifications.
 
-[![Version][badge-vers]][npm]
-[![Bundle size][npm-size-badge]][npm-size-url]
-[![Downloads][npm-downloads-badge]][npm]
-
 [![CodeFactor][codefactor-badge]][codefactor-url]
 [![SonarCloud][sonarcloud-badge]][sonarcloud-url]
 [![Codacy][codacy-badge]][codacy-url]
@@ -12,11 +8,8 @@ Telegram transport for SNS notifications.
 [![Language grade][lgtm-lg-badge]][lgtm-lg-url]
 [![Scrutinizer][scrutinizer-badge]][scrutinizer-url]
 
-[![Dependencies][badge-deps]][npm]
-[![Vulnerabilities][badge-vuln]](https://snyk.io/)
 [![Build Status][tests-badge]][tests-url]
 [![Coverage Status][badge-coverage]][url-coverage]
-
 [![Commit activity][commit-activity-badge]][github]
 [![License][badge-lic]][github]
 

@@ -1,30 +1,32 @@
-/* eslint-disable no-new */
 import { assert } from 'chai';
 import { pause } from 'myrmidon';
 import factory, { load } from '../Test';
 import { findTrackLog } from '../utils';
 
 suite('Telegram handle message');
+const tgApps = [];
 
 before(async () => {
     await factory.cleanup();
     const { Telegram } = load('lib/telegram');
 
-    new Telegram({
-        bot     : { id: 'good_poll', token: 'polling_token' },
-        updates : {
-            mode     : 'polling',
-            interval : '20ms'
-        }
-    });
+    tgApps.push(
+        new Telegram({
+            bot     : { id: 'good_poll', token: 'polling_token' },
+            updates : {
+                mode     : 'polling',
+                interval : '20ms'
+            }
+        }),
 
-    new Telegram({
-        bot     : { id: 'bad_poll', token: 'polling_token' },
-        updates : {
-            mode     : 'polling',
-            interval : '20ms'
-        }
-    });
+        new Telegram({
+            bot     : { id: 'bad_poll', token: 'polling_token' },
+            updates : {
+                mode     : 'polling',
+                interval : '20ms'
+            }
+        })
+    );
 
     await pause(100);
 });

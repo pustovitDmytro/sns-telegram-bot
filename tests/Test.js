@@ -9,9 +9,6 @@ import './init-hooks';
 mockAPI();
 
 class Test {
-    constructor() {
-    }
-
     async cleanup() {
         trackedLogs.length = 0;
     }
