@@ -69,7 +69,7 @@
     "jscpd": "^3.3.25",
     "json-query": "^2.2.2",
     "lockfile-lint": "^3.0.18",
-    "mocha": "^7.0.1",
+    "mocha": "^8.0.0",
     "mocha-junit-reporter": "^2.0.0",
     "nodemon": "^2.0.2",
     "nyc": "^15.0.0",
