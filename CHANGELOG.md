@@ -1,3 +1,14 @@
+## [1.3.3](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.2...v1.3.3) (2021-05-09)
+
+
+### Chore
+
+* adds danger package ([d923dbf](https://github.com/pustovitDmytro/sns-telegram-bot/commit/d923dbfb6a673a15cd5ef2fcbf6d645cacdc9fe0))
+
+### Fix
+
+* change dist path ([f6e4b33](https://github.com/pustovitDmytro/sns-telegram-bot/commit/f6e4b332b3b5e2f4c4d9d47205bbe8469b5d1c76))
+
 ## [1.3.2](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.1...v1.3.2) (2021-05-09)
 
 
