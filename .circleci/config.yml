@@ -122,9 +122,9 @@ workflows:
     jobs:
       - install:
           context: pr
-      - test-package:
-          requires:
-            - install
+      # - test-package:
+      #     requires:
+      #       - install
       - test-lint:
           requires:
             - install

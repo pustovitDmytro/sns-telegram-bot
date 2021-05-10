@@ -1,24 +1,32 @@
-import path from 'path';
 import fse from 'fs-extra';
-import aes from 'lib/aes';
 import seeds from 'seeds';
-import { tmpFolder, entry } from './constants';
+import { tmpFolder } from './constants';
 import { mockAPI, unMockAPI, trackedLogs } from './mock';
 import './init-hooks';
+import { load } from './utils';
+
+export * from './utils';
+
+// eslint-disable-next-line import/export
+export * from './constants';
 
 mockAPI();
 
 class Test {
+    constructor() {
+        this.aes = load('lib/aes').default;
+    }
+
     async cleanup() {
         trackedLogs.length = 0;
     }
 
     parseToken(token) {
-        return aes.decrypt(token);
+        return this.aes.decrypt(token);
     }
 
     getToken() {
-        return aes.encrypt({
+        return this.aes.encrypt({
             c : -389952175,
             u : 238585617,
             d : +new Date()
@@ -42,22 +50,8 @@ class Test {
     unMockAPI= unMockAPI
 }
 
-
-function load(relPath) {
-    // eslint-disable-next-line security/detect-non-literal-require
-    return require(path.join(entry, relPath));
-}
-
-function resolve(relPath) {
-    return require.resolve(path.join(entry, relPath));
-}
-
 export default new Test();
 
 export {
-    tmpFolder,
-    entry,
-    load,
-    resolve,
     seeds
 };

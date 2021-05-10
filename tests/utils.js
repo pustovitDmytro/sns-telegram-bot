@@ -1,6 +1,8 @@
 import { URL } from 'url';
+import path from 'path';
 import jsonQuery from 'json-query';
 import factory from './Test';
+import { entry } from './constants';
 
 
 export function extractUrls(text) {
@@ -17,4 +19,20 @@ export async function findTrackLog(query) {
     });
 
     return res.value;
+}
+
+export function load(relPath, clearCache) {
+    const absPath = path.resolve(entry, relPath);
+
+    if (clearCache) delete require.cache[require.resolve(absPath)];
+    // eslint-disable-next-line security/detect-non-literal-require
+    const result =  require(absPath);
+
+    if (clearCache) delete require.cache[require.resolve(absPath)];
+
+    return result;
+}
+
+export function resolve(relPath) {
+    return require.resolve(path.join(entry, relPath));
 }

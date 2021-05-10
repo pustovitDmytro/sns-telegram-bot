@@ -8,4 +8,7 @@ const config = confme(
 config.isTest = process.env.MODE === 'test';
 
 export default config;
-module.exports = config; // eslint-disable-line import/no-commonjs
+
+const  { cipher, bot, updates, app } = config;
+
+export { cipher, bot, updates, app };

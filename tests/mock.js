@@ -5,7 +5,7 @@ import { getNamespace } from 'cls-hooked';
 import ArrayTransport from 'winston-array-transport';
 import { createLogger, format, transports } from 'winston';
 // import seeds from 'seeds';
-import { load } from './Test';
+import { load } from './utils';
 
 const trackTransports = [];
 
@@ -36,9 +36,6 @@ export const trackLogger = createLogger({
 
 const AWSApiClient = load('api/AWSApiClient.js').default;
 const TelegramApiClient = load('api/TelegramApiClient.js').default;
-const telegram = load('lib/telegram').default;
-
-telegram.logger = trackLogger;
 
 function axiosResponse(data) {
     return { data };
