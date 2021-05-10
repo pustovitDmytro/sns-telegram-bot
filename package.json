@@ -88,7 +88,7 @@
     "confme": "1.1.0",
     "cors": "2.8.5",
     "dayjs": "1.10.4",
-    "dotenv": "9.0.1",
+    "dotenv": "9.0.2",
     "express": "4.17.1",
     "handlebars": "4.7.7",
     "livr": "2.3.3",
