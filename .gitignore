@@ -1,6 +1,4 @@
 node_modules
-etc/*.js
-etc/*.json
 lib/*
 tmp/*
 logs/*
