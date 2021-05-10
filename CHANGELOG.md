@@ -1,3 +1,17 @@
+## [1.3.8](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.7...v1.3.8) (2021-05-10)
+
+
+### Chore
+
+* additional quotes in glob pattern ([f6d15cf](https://github.com/pustovitDmytro/sns-telegram-bot/commit/f6d15cf2b6fc966f1b3a8b175b6bcf0144a80def))
+* fixes prevent require handler ([7923f0e](https://github.com/pustovitDmytro/sns-telegram-bot/commit/7923f0ed71ba537d7c50064a99e2e9af318fcb60))
+* prevent package:test from using devdependencies ([dc896f3](https://github.com/pustovitDmytro/sns-telegram-bot/commit/dc896f39fd79e6cb73c8cc458213c00f5f5a703d))
+* skip test:package job ([c63884c](https://github.com/pustovitDmytro/sns-telegram-bot/commit/c63884c4ece428fd9b5927e0a9a0be336d2c40e5))
+
+### Docs
+
+* adds basic readme ([dec494c](https://github.com/pustovitDmytro/sns-telegram-bot/commit/dec494c28786963b3d4543a6cd9cd9e542e5b262))
+
 ## [1.3.7](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.6...v1.3.7) (2021-05-10)
 
 
