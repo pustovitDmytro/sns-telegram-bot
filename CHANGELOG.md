@@ -1,3 +1,14 @@
+## [1.3.5](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.4...v1.3.5) (2021-05-10)
+
+
+### Chore
+
+* Update dependency lockfile-lint to v4 ([673a560](https://github.com/pustovitDmytro/sns-telegram-bot/commit/673a56085f81a76ff30e8f054f3e3267dc2e5bfd))
+
+### Upgrade
+
+* Update dependency uuid to v8 ([2f87343](https://github.com/pustovitDmytro/sns-telegram-bot/commit/2f87343db59fbbd5587b04f2ac5290f9709b66a5))
+
 ## [1.3.4](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.3...v1.3.4) (2021-05-10)
 
 
