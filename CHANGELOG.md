@@ -1,3 +1,10 @@
+## [1.3.9](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.8...v1.3.9) (2021-05-10)
+
+
+### Upgrade
+
+* Update dependency myrmidon to v1.5.2 ([b6e50f6](https://github.com/pustovitDmytro/sns-telegram-bot/commit/b6e50f6636be49b36c48109935a78cc811f9d815))
+
 ## [1.3.8](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.7...v1.3.8) (2021-05-10)
 
 
