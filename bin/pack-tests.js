@@ -72,7 +72,7 @@ async function run(tarFilePath) {
                 ]
             });
 
-            await fs.mkdir(DIR);
+            await fs.ensureDir(DIR);
             await bundle.write({
                 file   : path.resolve(DIR, 'tests.js'),
                 format : 'cjs'
