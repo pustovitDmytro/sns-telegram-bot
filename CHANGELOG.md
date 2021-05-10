@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.5...v1.3.6) (2021-05-10)
+
+
+### Fix
+
+* removes etc from gitignore ([b4cbb96](https://github.com/pustovitDmytro/sns-telegram-bot/commit/b4cbb96a70c748dc781f58d6da1233f8e5e3f822))
+
 ## [1.3.5](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.4...v1.3.5) (2021-05-10)
 
 
