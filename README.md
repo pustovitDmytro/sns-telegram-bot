@@ -17,6 +17,8 @@ Telegram transport for SNS notifications.
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [API-DOC](#api-doc)
+  - [Community Bot](#community-bot)
   - [Contribute](#contribute)
 
 ## Requirements
@@ -27,17 +29,36 @@ To use library you need to have [node](https://nodejs.org) and [npm](https://www
 
 ## Installation
 
-To install the library run the following command
+Clone sources from GitHub, and install modules:
 
 ```bash
-  npm i --save sns-telegram-bot
+  git clone git@github.com:pustovitDmytro/sns-telegram-bot.git
+  cd sns-telegram-bot
+  npm install
 ```
 
 ## Usage
 
-```javascript
+pass configuration as env variables (.env files supported)
 
+default values are in [.env.defaults](./.env.defaults)
+
+run compiled version by:
+```bash
+  node lib/app.js
 ```
+or sources by:
+```bash
+  npx babel-node runner.js
+```
+
+## API-DOC
+
+Check api-blueprint and swagger in [docs folder](./docs) or [Github-pages](https://pustovitdmytro.github.io/sns-telegram-bot/api-blueprint)
+
+## Community Bot 
+
+If you don't want to self-deploy, just use community bot [@aws_sns_to_tg_bot](https://telegram.me/aws_sns_to_tg_bot). It does not store any data, so feel free to use it.
 
 ## Contribute
 
