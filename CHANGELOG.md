@@ -1,3 +1,14 @@
+## [1.3.10](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.9...v1.3.10) (2021-05-10)
+
+
+### Chore
+
+* not fail package if no tmp exists ([5693813](https://github.com/pustovitDmytro/sns-telegram-bot/commit/569381326c9b688c492aa29c825a61901419d1de))
+
+### Docs
+
+* change API Documentation title ([4c25f14](https://github.com/pustovitDmytro/sns-telegram-bot/commit/4c25f143d65e198c646803d27dbaa408ac4f5c51))
+
 ## [1.3.9](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.8...v1.3.9) (2021-05-10)
 
 
