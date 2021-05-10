@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.3...v1.3.4) (2021-05-10)
+
+
+### Upgrade
+
+* Pin dependencies ([6224830](https://github.com/pustovitDmytro/sns-telegram-bot/commit/6224830767cd28ab8d4ed885e63abeb978e2b6dc))
+
 ## [1.3.3](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.2...v1.3.3) (2021-05-09)
 
 
