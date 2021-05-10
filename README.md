@@ -17,7 +17,7 @@ Telegram transport for SNS notifications.
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [API-DOC](#api-doc)
+  - [API Documentation](#api-documentation)
   - [Community Bot](#community-bot)
   - [Contribute](#contribute)
 
@@ -52,7 +52,7 @@ or sources by:
   npx babel-node runner.js
 ```
 
-## API-DOC
+## API Documentation
 
 Check api-blueprint and swagger in [docs folder](./docs) or [Github-pages](https://pustovitdmytro.github.io/sns-telegram-bot/api-blueprint)
 
