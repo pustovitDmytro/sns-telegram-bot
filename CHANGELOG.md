@@ -1,3 +1,10 @@
+## [1.3.13](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.12...v1.3.13) (2021-05-21)
+
+
+### Upgrade
+
+* Update dependency dotenv to v10 ([35b4377](https://github.com/pustovitDmytro/sns-telegram-bot/commit/35b437799ce76f3b3a1713bb20d74411f8d3d59f))
+
 ## [1.3.12](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.11...v1.3.12) (2021-05-15)
 
 
