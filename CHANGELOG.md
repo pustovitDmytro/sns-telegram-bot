@@ -1,3 +1,10 @@
+## [1.3.15](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.14...v1.3.15) (2021-05-25)
+
+
+### Upgrade
+
+* Update dependency logger-decorator to v1.3.2 ([6be97b2](https://github.com/pustovitDmytro/sns-telegram-bot/commit/6be97b2f342c8e800959672210b4d2613cc14621))
+
 ## [1.3.14](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.13...v1.3.14) (2021-05-25)
 
 
