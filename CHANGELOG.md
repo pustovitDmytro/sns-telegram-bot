@@ -1,3 +1,10 @@
+## [1.3.16](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.15...v1.3.16) (2021-05-26)
+
+
+### Upgrade
+
+* Update dependency dayjs to v1.10.5 ([ad98a73](https://github.com/pustovitDmytro/sns-telegram-bot/commit/ad98a73c5ea5acfc1e735c334307bd8fe23652e3))
+
 ## [1.3.15](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.14...v1.3.15) (2021-05-25)
 
 
