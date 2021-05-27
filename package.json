@@ -95,7 +95,7 @@
     "livr-extra-rules": "1.2.1",
     "logger-decorator": "1.3.2",
     "ms": "2.1.3",
-    "myrmidon": "1.5.2",
+    "myrmidon": "1.5.3",
     "qs": "6.10.1",
     "uuid": "8.3.2",
     "winston": "3.3.3",
