@@ -2,7 +2,7 @@ import { assert } from 'chai';
 import { pause } from 'myrmidon';
 import factory, { load } from '../Test';
 
-suite('Telegram handle message');
+suite('Telegram polling #no-pack');
 
 before(async function () {
     await factory.cleanup();
