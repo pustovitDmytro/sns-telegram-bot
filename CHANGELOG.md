@@ -1,3 +1,10 @@
+## [1.3.19](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.18...v1.3.19) (2021-05-28)
+
+
+### Upgrade
+
+* Update dependency base-api-client to v1.4.4 ([a602587](https://github.com/pustovitDmytro/sns-telegram-bot/commit/a6025872e4d0fd54cb94f2b79c011135d24945e1))
+
 ## [1.3.18](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.17...v1.3.18) (2021-05-27)
 
 
