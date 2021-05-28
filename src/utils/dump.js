@@ -93,7 +93,7 @@ export function dumpChat(chat) {
 }
 
 export function dumpSticker(sticker) {
-    if (!sticker) return undefined;
+    if (!sticker) return;
 
     return {
         id     : sticker.file_id,

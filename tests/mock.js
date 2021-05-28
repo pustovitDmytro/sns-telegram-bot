@@ -94,7 +94,7 @@ class MockTelegramApiClient extends TelegramApiClient {
         const [ , botId ] = this.url.pathname.split(/\W/);
         const prefix = 'bot';
 
-        return botId.substring(prefix.length);
+        return botId.slice(prefix.length);
     }
 }
 
@@ -107,7 +107,7 @@ tgMethods.forEach(methodName => {
     BACKUP.tg[methodName] = TelegramApiClient.prototype[methodName];
 });
 awsMethods.forEach(methodName => {
-    BACKUP.tg[methodName] = AWSApiClient.prototype[methodName];
+    BACKUP.aws[methodName] = AWSApiClient.prototype[methodName];
 });
 
 
@@ -124,10 +124,11 @@ export function mockAPI() {
 
 export function unMockAPI() {
     tgMethods.forEach(methodName => {
-        MockTelegramApiClient.prototype[methodName] = TelegramApiClient.prototype[methodName];
+        TelegramApiClient.prototype[methodName] = BACKUP.tg[methodName];
     });
+
     awsMethods.forEach(methodName => {
-        MockAWSApiClient.prototype[methodName] = AWSApiClient.prototype[methodName];
+        AWSApiClient.prototype[methodName] = BACKUP.aws[methodName];
     });
 }
 

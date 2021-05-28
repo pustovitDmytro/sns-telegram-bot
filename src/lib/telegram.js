@@ -53,7 +53,7 @@ export class Telegram {
         const isAddedToGroup = type === 'NEW_MEMBER' && payload.id === this._id;
 
         if (isAddedToGroup) {
-            const token = aes.encrypt({ c: to.id, u: from.id, d: +new Date(), v: version });
+            const token = aes.encrypt({ c: to.id, u: from.id, d: Date.now(), v: version });
 
             return handlebars.templates.telegram.urlSuccess({ token });
         }
@@ -62,7 +62,7 @@ export class Telegram {
 
         if (isCommand) {
             if (payload.command === 'url') {
-                const token = aes.encrypt({ c: from.id, d: +new Date(), v: version });
+                const token = aes.encrypt({ c: from.id, d: Date.now(), v: version });
 
                 return handlebars.templates.telegram.urlSuccess({ token });
             }
@@ -85,11 +85,11 @@ export class Telegram {
     polling = async () => {
         const updates = await this.api.getUpdates(this.lastUpdate);
 
-        if (updates.length) {
+        if (updates.length > 0) {
             this.lastUpdate = updates[updates.length - 1].id;
         }
 
-        await Promise.all(updates.map(this.processUpdate));
+        await Promise.all(updates.map((element) => this.processUpdate(element)));
     }
 
     sendMessage(chat, message) {

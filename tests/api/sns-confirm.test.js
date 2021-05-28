@@ -3,11 +3,10 @@ import { awsConfirmation } from 'seeds';
 import request from '../request';
 import factory from '../Test';
 import { queries } from '../constants';
-import { findTrackLog } from '../utils';
 
 suite('Confirm SNS Subscriptions');
 
-before(async () => {
+before(async function () {
     await factory.cleanup();
 });
 
@@ -22,12 +21,12 @@ test('Positive: confirm', async function () {
             assert.ok(body.status);
         });
 
-    const log = await findTrackLog(queries.awsConfirm);
+    const log = await factory.findTrackLog(queries.awsConfirm);
 
     assert.equal(log, awsConfirmation.SubscribeURL);
 });
 
-after(async () => {
+after(async function () {
     await factory.cleanup();
 });
 

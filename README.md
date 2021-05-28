@@ -22,10 +22,12 @@ Telegram transport for SNS notifications.
   - [Contribute](#contribute)
 
 ## Requirements
+
 To use library you need to have [node](https://nodejs.org) and [npm](https://www.npmjs.com) installed in your machine:
 
-* node `6.0+`
-* npm `3.0+`
+* node `>=10`
+* npm `>=6`
+
 
 ## Installation
 
@@ -62,25 +64,7 @@ If you don't want to self-deploy, just use community bot [@aws_sns_to_tg_bot](ht
 
 ## Contribute
 
-Make the changes to the code and tests. Then commit to your branch. Be sure to follow the commit message conventions.
-
-Commit message summaries must follow this basic format:
-```
-  Tag: Message (fixes #1234)
-```
-
-The Tag is one of the following:
-* **Fix** - for a bug fix.
-* **Update** - for a backwards-compatible enhancement.
-* **Breaking** - for a backwards-incompatible enhancement.
-* **Docs** - changes to documentation only.
-* **Build** - changes to build process only.
-* **New** - implemented a new feature.
-* **Upgrade** - for a dependency upgrade.
-* **Chore** - for tests, refactor, style, etc.
-
-The message summary should be a one-sentence description of the change. The issue number should be mentioned at the end.
-
+Make the changes to the code and tests. Then commit to your branch. Be sure to follow the commit message conventions. Read [Contributing Guidelines](.github/CONTRIBUTING.md) for details.
 
 [npm]: https://www.npmjs.com/package/sns-telegram-bot
 [github]: https://github.com/pustovitDmytro/sns-telegram-bot
@@ -118,3 +102,8 @@ The message summary should be a one-sentence description of the change. The issu
 [npm-downloads-badge]: https://img.shields.io/npm/dw/sns-telegram-bot
 [npm-size-badge]: https://img.shields.io/bundlephobia/min/sns-telegram-bot
 [npm-size-url]: https://bundlephobia.com/result?p=sns-telegram-bot
+
+[appveyor-badge]: https://ci.appveyor.com/api/projects/status/d0d3nsp0l0swihkx/branch/master?svg=true
+[appveyor-url]: https://ci.appveyor.com/project/pustovitDmytro/sns-telegram-bot/branch/master
+
+

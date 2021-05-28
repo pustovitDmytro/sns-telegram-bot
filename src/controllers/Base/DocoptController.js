@@ -48,6 +48,7 @@ export default class DocoptController extends Base {
     static renderAsExit = data => {
         const exitCode = data.status ? 0 : 1;
 
+        // eslint-disable-next-line no-process-exit
         process.exit(exitCode);
     }
 

@@ -1,16 +1,14 @@
 import { assert } from 'chai';
 import { pause } from 'myrmidon';
 import factory, { load } from '../Test';
-import { findTrackLog } from '../utils';
 
 suite('Telegram handle message');
-const tgApps = [];
 
-before(async () => {
+before(async function () {
     await factory.cleanup();
     const { Telegram } = load('lib/telegram');
 
-    tgApps.push(
+    const tgApps = [
         new Telegram({
             bot     : { id: 'good_poll', token: 'polling_token' },
             updates : {
@@ -26,30 +24,31 @@ before(async () => {
                 interval : '20ms'
             }
         })
-    );
+    ];
 
     await pause(100);
+    console.log(`Started ${tgApps.length} apps`);
 });
 
 
-test('Positive: tg count succeded requests', async () => {
-    const onStart = await findTrackLog('[*url=/getUpdates&traceId=good_poll].timestamp');
+test('Positive: tg count succeded requests', async function () {
+    const onStart = await factory.findTrackLog('[*url=/getUpdates&traceId=good_poll].timestamp');
 
     await pause(105);
 
-    const onEnd = await findTrackLog('[*url=/getUpdates&traceId=good_poll].timestamp');
+    const onEnd = await factory.findTrackLog('[*url=/getUpdates&traceId=good_poll].timestamp');
     const madeOnPeriod = onEnd.length - onStart.length;
 
     assert.isAtLeast(madeOnPeriod, 4);
     assert.isAtMost(madeOnPeriod, 6);
 });
 
-test('Negative: polling errors', async () => {
-    const onStart = await findTrackLog('[*url=/getUpdates&traceId=bad_poll].timestamp');
+test('Negative: polling errors', async function () {
+    const onStart = await factory.findTrackLog('[*url=/getUpdates&traceId=bad_poll].timestamp');
 
     await pause(105);
 
-    const onEnd = await findTrackLog('[*url=/getUpdates&traceId=bad_poll].timestamp');
+    const onEnd = await factory.findTrackLog('[*url=/getUpdates&traceId=bad_poll].timestamp');
     const madeOnPeriod = onEnd.length - onStart.length;
 
     assert.isAtLeast(madeOnPeriod, 4);
@@ -57,6 +56,6 @@ test('Negative: polling errors', async () => {
 });
 
 
-after(async () => {
+after(async function () {
     await factory.cleanup();
 });

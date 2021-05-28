@@ -3,15 +3,15 @@ import { telegramUpdates } from 'seeds';
 import request from '../request';
 import factory from '../Test';
 import { queries } from '../constants';
-import { extractUrls, findTrackLog } from '../utils';
+import { extractUrls } from '../utils';
 
 suite('Create Session');
 
-before(async () => {
+before(async function () {
     await factory.cleanup();
 });
 
-test('Positive: on add to channel', async function () {
+test('Positive: on add to channel #no-pack', async function () {
     const payload = telegramUpdates[0];
 
     await request
@@ -24,7 +24,7 @@ test('Positive: on add to channel', async function () {
             assert.ok(body.status);
         });
 
-    const log = await findTrackLog(queries.tgSendMessage);
+    const log = await factory.findTrackLog(queries.tgSendMessage);
 
     const [ url ] = extractUrls(log.text);
     const token = url.pathname.split('/').reverse().find(i => i);
@@ -37,7 +37,7 @@ test('Positive: on add to channel', async function () {
     });
 });
 
-after(async () => {
+after(async function () {
     await factory.cleanup();
 });
 

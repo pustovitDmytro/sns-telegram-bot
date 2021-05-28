@@ -1,4 +1,5 @@
 import fse from 'fs-extra';
+import jsonQuery from 'json-query';
 import seeds from 'seeds';
 import { tmpFolder } from './constants';
 import { mockAPI, unMockAPI, trackedLogs } from './mock';
@@ -27,9 +28,9 @@ class Test {
 
     getToken() {
         return this.aes.encrypt({
-            c : -389952175,
-            u : 238585617,
-            d : +new Date()
+            c : -389_952_175,
+            u : 238_585_617,
+            d : Date.now()
         });
     }
 
@@ -48,6 +49,16 @@ class Test {
     mockAPI = mockAPI
 
     unMockAPI= unMockAPI
+
+    async findTrackLog(query) {
+        const tracks = await this.getTracks();
+        const res = jsonQuery(query, {
+            data         : tracks,
+            enableRegexp : true
+        });
+
+        return res.value;
+    }
 }
 
 export default new Test();

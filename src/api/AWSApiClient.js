@@ -6,7 +6,7 @@ export default @verbose class AWSApiClient extends ApiClient {
     confirm(href) {
         const url = new URL(href);
 
-        if (!url.origin.match(/https:\/\/sns\..*\.amazonaws\.com/)) throw new Error('FORBIDDEN');
+        if (!/https:\/\/sns\..*\.amazonaws\.com/.test(url.origin)) throw new Error('FORBIDDEN');
 
         return this.get(url.href);
     }

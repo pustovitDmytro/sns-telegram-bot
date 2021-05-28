@@ -23,7 +23,7 @@ export default @verbose class TelegramApiClient extends ApiClient {
             offset : lastUpdate + 1
         });
 
-        return data.map(dumpUpdate);
+        return data.map((element) => dumpUpdate(element));
     }
 
     async sendMessage(chatId, html) {

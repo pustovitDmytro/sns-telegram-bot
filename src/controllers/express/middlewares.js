@@ -8,7 +8,7 @@ export default {
         verify : (req, res, buf) => {
             try {
                 JSON.parse(buf);
-            } catch (e) {
+            } catch {
                 res.send({
                     status : 0,
                     error  : {
@@ -25,7 +25,8 @@ export default {
 
         keys
             .filter(key => req.query[key].includes(','))
-            .forEach(key => req.query[key] = req.query[key].split(',')); //eslint-disable-line
+            // eslint-disable-next-line no-param-reassign
+            .forEach(key => req.query[key] = req.query[key].split(','));
 
         return next();
     },

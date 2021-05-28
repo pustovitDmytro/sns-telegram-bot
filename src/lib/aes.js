@@ -6,9 +6,9 @@ const HEX_MULTIPLIER = 2;
 const IV_STRING_LENGTH = HEX_MULTIPLIER * IV_LENGTH;
 
 function pad(num, size) {
-    const zeros = (new Array(size)).fill('0').join('');
+    const zeros = (Array.from({ length: size })).fill('0').join('');
 
-    return (`${zeros}${num}`).substr(-size);
+    return (`${zeros}${num}`).slice(-size);
 }
 
 class AES {
@@ -48,7 +48,7 @@ function toNumber(cipher, alphabet) {
 
     cipher
         .split('')
-        .map(s => alphabet.findIndex(e => e === s))
+        .map(s => alphabet.indexOf(s))
         .forEach((n, index) => {
             const power = BigInt(cipher.length - index - 1);
 
@@ -72,8 +72,8 @@ function toSymbols(num, alphabet) {
 
 class Cipher extends AES {
     outAlphabet = [
-        ...'abcdefghijklmnopqrstuvwxyz',
-        ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        ...'abcdefghijklmnopqrstuvwxyz',  // eslint-disable-line no-secrets/no-secrets
+        ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ',  // eslint-disable-line no-secrets/no-secrets
         ...'0123456789'
     ]
 

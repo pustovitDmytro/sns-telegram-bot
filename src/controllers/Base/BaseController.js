@@ -48,9 +48,9 @@ export default class BaseController {
                 ...data,
                 status : 1
             };
-        } catch (err) {
+        } catch (error) {
             return {
-                error  : Error.render(err),
+                error  : Error.render(error),
                 status : 0
             };
         }

@@ -14,8 +14,6 @@ const defaultRules = {
 
             if (!date.isValid()) return 'WRONG_DATE';
             outputArr.push(date);
-
-            return;
         };
     }
 };

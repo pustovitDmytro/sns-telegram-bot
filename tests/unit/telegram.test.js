@@ -7,30 +7,30 @@ const telegram = load('lib/telegram').default;
 
 suite('Telegram handle message');
 
-before(async () => {
+before(async function () {
     await factory.cleanup();
 });
 
-const [ addToChannel, getPrivateUrl ] = telegramUpdates.map(dumpUpdate);
+const [ addToChannel, getPrivateUrl ] = telegramUpdates.map((element) => dumpUpdate(element));
 
-test('Positive: on add to channel', async () => {
+test('Positive: on add to channel #no-pack', async function () {
     assert.exists(
         telegram.handleMessage(addToChannel.message)
     );
 });
 
-test('Positive: get private url', async () => {
+test('Positive: get private url', async function () {
     assert.exists(
         telegram.handleMessage(getPrivateUrl.message)
     );
 });
 
-test('Positive: intro message', async () => {
+test('Positive: intro message', async function () {
     assert.exists(
         telegram.handleMessage(dumpUpdate(generateTgCommand('/start')).message)
     );
 });
 
-after(async () => {
+after(async function () {
     await factory.cleanup();
 });

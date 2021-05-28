@@ -1,24 +1,11 @@
 import { URL } from 'url';
 import path from 'path';
-import jsonQuery from 'json-query';
-import factory from './Test';
 import { entry } from './constants';
 
-
 export function extractUrls(text) {
-    const pattern = /(?:(?:https?|ftp):\/\/|\b(?:[a-z\d]+\.))(?:(?:[^\s()<>]+|\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))?\))+(?:\((?:[^\s()<>]+|(?:\(?:[^\s()<>]+\)))?\)|[^\s`!()\[\]{};:\'".,<>?«»“”‘’]))?/; // eslint-disable-line
+    const pattern = /(?:(?:https?|ftp):\/\/|[\da-z]+\.)(?:(?:[^\s()<>]+|\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))?\))+(?:\((?:[^\s()<>]+|(?:\(?:[^\s()<>]+\)))?\)|[^\s!"'(),.:;<>?[\]`{}«»‘’“”]))?/;
 
     return text.match(new RegExp(pattern, 'ig')).map(u => new URL(u));
-}
-
-export async function findTrackLog(query) {
-    const tracks = await factory.getTracks();
-    const res = jsonQuery(query, {
-        data         : tracks,
-        enableRegexp : true
-    });
-
-    return res.value;
 }
 
 export function load(relPath, clearCache) {

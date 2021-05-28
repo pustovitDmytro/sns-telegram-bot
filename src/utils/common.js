@@ -4,12 +4,14 @@ import { isFunction } from 'myrmidon';
 const isGetter = (x, name) => (Object.getOwnPropertyDescriptor(x, name) || {}).get;
 
 const deepFunctions = x =>
-    x && x !== Object.prototype && Object.getOwnPropertyNames(x)
-        .filter(name => isGetter(x, name) || isFunction(x[name]))
-        .concat(deepFunctions(Object.getPrototypeOf(x)) || []);
+    x && x !== Object.prototype && [
+        ...Object.getOwnPropertyNames(x)
+            .filter(name => isGetter(x, name) || isFunction(x[name])),
+        ...(deepFunctions(Object.getPrototypeOf(x)) || [])
+    ];
 
 
-export const getMethodNames = x => Array.from(new Set(deepFunctions(x)));
+export const getMethodNames = x => [ ...new Set(deepFunctions(x)) ];
 
 export function getMethodDescriptor(propertyName, target) {
     if (target.hasOwnProperty(propertyName)) {
