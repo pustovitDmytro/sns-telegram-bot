@@ -1,3 +1,14 @@
+## [1.3.21](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.20...v1.3.21) (2021-05-28)
+
+
+### Chore
+
+* disable polling in package tests ([6e9554a](https://github.com/pustovitDmytro/sns-telegram-bot/commit/6e9554ae3a106ab28668f6d22183a7386bd0c421))
+
+### Fix
+
+* set babel target node version to 10 ([f736568](https://github.com/pustovitDmytro/sns-telegram-bot/commit/f73656838a20d11da6680579cfccc24a9f4a1201))
+
 ## [1.3.20](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.19...v1.3.20) (2021-05-28)
 
 
