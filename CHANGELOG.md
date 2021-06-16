@@ -1,3 +1,27 @@
+## [1.3.22](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.21...v1.3.22) (2021-06-16)
+
+
+### Chore
+
+* adds stabilityDays to renovate ([3b262bc](https://github.com/pustovitDmytro/sns-telegram-bot/commit/3b262bcefc6db318d2a7d9103f9f5f42315202d5))
+* fix json in renovate ([8ad7928](https://github.com/pustovitDmytro/sns-telegram-bot/commit/8ad792825b2703e3159b65faf722eb43a1d9d421))
+* fixes npm  audit ([c3beccd](https://github.com/pustovitDmytro/sns-telegram-bot/commit/c3beccdf1926d72dcf9b13cd153e37916f1a8d13))
+* integrate fossa ([b65e961](https://github.com/pustovitDmytro/sns-telegram-bot/commit/b65e961a5ae500b1b5fd12fce3436e71c1518e35))
+* integrate node-package-tester ([9d53bf3](https://github.com/pustovitDmytro/sns-telegram-bot/commit/9d53bf30d295368e7f1e925c18b00e48cc16014e))
+* Lock file maintenance ([b9bf6f9](https://github.com/pustovitDmytro/sns-telegram-bot/commit/b9bf6f95f399539ecabfd0dfa02c96b9192468c3))
+* Lock file maintenance ([3291a21](https://github.com/pustovitDmytro/sns-telegram-bot/commit/3291a2144ee143dc327f6fb4a8b82e62e07b1c1f))
+* Lock file maintenance ([121930f](https://github.com/pustovitDmytro/sns-telegram-bot/commit/121930f5a0564872413f8b3b57285d1bc5604961))
+* removes unused devDependencies ([ddb100a](https://github.com/pustovitDmytro/sns-telegram-bot/commit/ddb100aa634ab2e1d2695de73d9aeb4a7795ccce))
+* set YARGS_MIN_NODE_VERSION 10 ([9b6bef9](https://github.com/pustovitDmytro/sns-telegram-bot/commit/9b6bef9d89f8f0c958ee1fe60f20475dd20c8276))
+* Update dependency eslint-plugin-regexp to ^0.12.0 ([591679c](https://github.com/pustovitDmytro/sns-telegram-bot/commit/591679c15d98b98aaa2be91ce54201117328f5dc))
+* Update dependency eslint-plugin-unicorn to v33 ([bfa00ff](https://github.com/pustovitDmytro/sns-telegram-bot/commit/bfa00ff354dfb9ffe717e9a36f7a938d44b32611))
+* Update dependency glob-parent to 5.1.2 [SECURITY] ([c957512](https://github.com/pustovitDmytro/sns-telegram-bot/commit/c957512cf496d9b99e2278b44b6bb9da545f57a8))
+* Update dependency mocha to v9 ([93b7a17](https://github.com/pustovitDmytro/sns-telegram-bot/commit/93b7a1783ea97a7bcd94d570ef33b61314c93746))
+
+### Upgrade
+
+* Update dependency logger-decorator to v1.3.3 ([97116a9](https://github.com/pustovitDmytro/sns-telegram-bot/commit/97116a924fcaf02d42263a0f1b2faead777ecc00))
+
 ## [1.3.21](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.20...v1.3.21) (2021-05-28)
 
 
