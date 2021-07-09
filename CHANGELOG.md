@@ -1,3 +1,17 @@
+## [1.3.24](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.23...v1.3.24) (2021-07-09)
+
+
+### Chore
+
+* Lock file maintenance (#52) ([f3c60e5](https://github.com/pustovitDmytro/sns-telegram-bot/commit/f3c60e576065cd909982c49f3eab76255729c17a)), closes [#52](https://github.com/pustovitDmytro/sns-telegram-bot/issues/52)
+* Update dependency eslint-plugin-regexp to ^0.13.0 ([9f89c1f](https://github.com/pustovitDmytro/sns-telegram-bot/commit/9f89c1f168cb64c51a011e342839ae284fa742f9))
+* Update dependency eslint-plugin-unicorn to v34 ([2180fdf](https://github.com/pustovitDmytro/sns-telegram-bot/commit/2180fdfd8fd60ab664d80112681136a95306d46c))
+* Update dependency husky to v7 ([5680778](https://github.com/pustovitDmytro/sns-telegram-bot/commit/5680778ffbf0c34278a209cb22fd3b8c7e4887ed))
+
+### Upgrade
+
+* Update dependency dayjs to v1.10.6 ([8048488](https://github.com/pustovitDmytro/sns-telegram-bot/commit/8048488ac600c5ac1f418a23f355e84f68100148))
+
 ## [1.3.23](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.22...v1.3.23) (2021-06-16)
 
 
