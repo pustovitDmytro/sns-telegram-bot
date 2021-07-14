@@ -1,3 +1,14 @@
+## [1.3.25](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.24...v1.3.25) (2021-07-14)
+
+
+### Chore
+
+* Update dependency eslint-plugin-sonarjs to ^0.9.0 ([6814b2d](https://github.com/pustovitDmytro/sns-telegram-bot/commit/6814b2dbda8520b162720517dc36d7a3bb4da9d0))
+
+### Upgrade
+
+* Update dependency myrmidon to v1.5.8 ([47f8b08](https://github.com/pustovitDmytro/sns-telegram-bot/commit/47f8b080491d2969bc9b6abe19e4a8119bf8a72d))
+
 ## [1.3.24](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.23...v1.3.24) (2021-07-09)
 
 
