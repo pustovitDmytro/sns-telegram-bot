@@ -42,6 +42,10 @@
 
     "packageRules": [
         {
+            "matchSourceUrlPrefixes": ["https://github.com/pustovitDmytro/"],
+            "groupName": "pustovitDmytro packages"
+        },
+        {
             "matchDepTypes": ["devDependencies"],
             "automerge": true,
             "semanticCommitType": "Chore"
@@ -50,15 +54,22 @@
             "matchDepTypes": ["dependencies"],
             "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
             "automerge": true
-        },                
+        },    
+        {
+            "matchDepTypes": ["dependencies"],
+            "matchUpdateTypes": ["major"],
+            "semanticCommitType": "Breaking"
+            "labels": ["dependencies", "breaking"],
+            "automerge": false
+        },               
         {
             "matchDepTypes": [ "dependencies", "require" ],
             "rangeStrategy": "pin",
             "semanticCommitType": "Upgrade"
         },
         {
-          "matchDepTypes": [ "peerDependencies"],
-          "rangeStrategy": "widen"
+            "matchDepTypes": [ "peerDependencies"],
+            "rangeStrategy": "widen"
         }
     ]
 }
