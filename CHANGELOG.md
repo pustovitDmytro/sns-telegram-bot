@@ -1,3 +1,16 @@
+## [1.3.27](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.26...v1.3.27) (2021-07-19)
+
+
+### Chore
+
+* enhance own updates commit messages ([49a2365](https://github.com/pustovitDmytro/sns-telegram-bot/commit/49a2365c0a49363e42365503939b98819a6c1864))
+* fixes renovate config ([982abaf](https://github.com/pustovitDmytro/sns-telegram-bot/commit/982abaf61a98de14dadc2fcb8b37b854577cbc64))
+* not allow to fail on node 16 ([22ed683](https://github.com/pustovitDmytro/sns-telegram-bot/commit/22ed683ace773b242382c094b363a1713f9d8352))
+
+### Upgrade
+
+* Update pustovitDmytro's packages (#61) ([651058d](https://github.com/pustovitDmytro/sns-telegram-bot/commit/651058d88f0828fc6db79ca98e561c33669a34f5)), closes [#61](https://github.com/pustovitDmytro/sns-telegram-bot/issues/61)
+
 ## [1.3.26](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.25...v1.3.26) (2021-07-15)
 
 
