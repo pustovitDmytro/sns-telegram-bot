@@ -5,6 +5,6 @@
         [ "tests/test.env", ".env" ],
         [ ".env.defaults", ".env.defaults" ]
     ],
-    "modules": [ "cls-hooked", "fs-extra", "yargs", "uuid", "rest-chronicle", "winston", "winston-array-transport" ],
+    "modules": [ "cls-hooked", "fs-extra", "yargs", "uuid", "rest-chronicle", "winston", "winston-array-transport", "supertest" ],
     "copyDefaultFiles": true
 }
