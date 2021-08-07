@@ -19,15 +19,15 @@ export default class ServiceBase {
     }
 
     checkPermissions() {
-        const required = this.constructor.permissions;
+        // const required = this.constructor.permissions;
 
-        if (!required) return;
-        const { user } = this.context;
-        const notAllowed = !user || !user.permissions?.isAllowed(required);
+        // if (!required) return;
+        // const { user } = this.context;
+        // const notAllowed = !user || !user.permissions?.isAllowed(required);
 
-        if (notAllowed) {
-            throw new ACTION_NOT_PERMITTED();
-        }
+        // if (notAllowed) {
+        //     throw new ACTION_NOT_PERMITTED();
+        // }
     }
 
     async run(params) {

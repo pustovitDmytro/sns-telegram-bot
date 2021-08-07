@@ -13,16 +13,16 @@ export default class ExpressController extends Base {
 
     static renderAsJson = (req, res, next, data) => res.send(data)
 
-    static renderAsFile = (req, res, next, data) => {
-        const { stream, filename, status } = data;
+    // static renderAsFile = (req, res, next, data) => {
+    //     const { stream, filename, status } = data;
 
-        if (status === 1) {
-            res.attachment(filename);
-            stream.pipe(res);
-        } else {
-            ExpressController.renderAsJson(req, res, next, data);
-        }
-    }
+    //     if (status === 1) {
+    //         res.attachment(filename);
+    //         stream.pipe(res);
+    //     } else {
+    //         ExpressController.renderAsJson(req, res, next, data);
+    //     }
+    // }
 
     static renderAsSessionMiddlevare = (req, res, next, data) => {
         const { status, ...payload } = data;
