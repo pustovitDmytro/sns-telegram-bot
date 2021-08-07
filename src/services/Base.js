@@ -1,5 +1,5 @@
 import LIVR from 'livr';
-import { ACTION_NOT_PERMITTED, VALIDATION_FAILED } from 'src/error';
+import { VALIDATION_FAILED } from 'src/error';
 
 export default class ServiceBase {
     static LOG_LEVEL = 'info'
