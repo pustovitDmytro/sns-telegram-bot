@@ -31,7 +31,7 @@ function testLIVR(data, rule, { valid, error } = {}) {
     }
 }
 
-suite('Utils: validators');
+suite('Utils: validators #no-pack');
 
 before(async function () {
     await factory.cleanup();
