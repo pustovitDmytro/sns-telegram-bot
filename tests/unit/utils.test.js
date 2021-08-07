@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { dumpCommand, resolveUrl } from 'utils';
+import { dumpCommand } from 'utils';
 import factory from '../Test';
 
 suite('Utils');
@@ -13,11 +13,4 @@ test('parse telegram commands', async function () {
         command  : 'url',
         template : 'my cool template'
     });
-});
-
-test('resolve url', function () {
-    assert.equal(
-        resolveUrl(null, 'http://google.com').href,
-        'http://google.com/'
-    );
 });
