@@ -27,7 +27,7 @@ export default class X extends Error {
 
     render() {
         const error = {
-            code    : this.code || ERROR_CODES[this.name] ||  ERROR_CODES[UNKNOWN_ERROR_CODE],
+            code    : this.code || ERROR_CODES[this.name] ||  ERROR_CODES.UNKNOWN_ERROR,
             message : this.message
         };
 
@@ -44,7 +44,7 @@ export default class X extends Error {
         }
 
         return {
-            code    : ERROR_CODES.UNKNOWN_ERROR_CODE,
+            code    : ERROR_CODES.UNKNOWN_ERROR,
             message : UNKNOWN_ERROR_CODE
         };
     }

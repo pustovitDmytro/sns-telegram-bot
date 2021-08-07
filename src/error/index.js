@@ -14,7 +14,7 @@ export class ACTION_NOT_PERMITTED extends X {
 }
 
 export class VALIDATION_FAILED extends X {
-    message = JSON.stringify(this.payload)
+    message = 'validation failed'
 
-    fields = JSON.stringify(this.payload)
+    fields = this.payload
 }
