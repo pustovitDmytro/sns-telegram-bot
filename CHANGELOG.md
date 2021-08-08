@@ -1,3 +1,21 @@
+## [1.3.28](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.27...v1.3.28) (2021-08-08)
+
+
+### Chore
+
+* adds error tests ([534ba97](https://github.com/pustovitDmytro/sns-telegram-bot/commit/534ba97ff0d09eac24a2ccdcdf3099d74751ad39))
+* adds tests for validators ([a4c0277](https://github.com/pustovitDmytro/sns-telegram-bot/commit/a4c02778d2f3efae7fcc944f9bd3b15794acb3d3))
+* drop unused base methods ([4b48bc0](https://github.com/pustovitDmytro/sns-telegram-bot/commit/4b48bc04c67f5c0284f76fded2a00a67d8ce94e4))
+* drop unused utils ([bcd3cb6](https://github.com/pustovitDmytro/sns-telegram-bot/commit/bcd3cb6350c95bdaf4d2293f192aeec21b805d15))
+* fixes package tests ([d2a5a0d](https://github.com/pustovitDmytro/sns-telegram-bot/commit/d2a5a0ddb3c01fbf658dda2368d6a6ab126b8b23))
+* Lock file maintenance ([82d5ae7](https://github.com/pustovitDmytro/sns-telegram-bot/commit/82d5ae710c17cb6360265fbe9665b3f69abf6b19))
+* Update commitlint monorepo to v13 ([0c0738a](https://github.com/pustovitDmytro/sns-telegram-bot/commit/0c0738a5d822f8b26eec99ee10e20c34518e6a1d))
+* Update dependency rest-chronicle to v2 (#62) ([7ad9d6e](https://github.com/pustovitDmytro/sns-telegram-bot/commit/7ad9d6e3cc3a91700b21efd5a4b4c451623b1a77)), closes [#62](https://github.com/pustovitDmytro/sns-telegram-bot/issues/62)
+
+### Upgrade
+
+* Update dependency yargs to v17.1.0 ([7a02604](https://github.com/pustovitDmytro/sns-telegram-bot/commit/7a0260467f1a2cdeedcb5992bcd88f5cfe348bdd))
+
 ## [1.3.27](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.26...v1.3.27) (2021-07-19)
 
 
