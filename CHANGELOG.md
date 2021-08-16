@@ -1,3 +1,14 @@
+## [1.3.29](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.28...v1.3.29) (2021-08-16)
+
+
+### Chore
+
+* Update dependency eslint-plugin-sonarjs to ^0.10.0 ([0dd6200](https://github.com/pustovitDmytro/sns-telegram-bot/commit/0dd6200636abb6a23643fe305b80531234367323))
+
+### Upgrade
+
+* Update dependency yargs to v17.1.1 ([19ff17f](https://github.com/pustovitDmytro/sns-telegram-bot/commit/19ff17fce7e0bebfedac1e9871c9924a8df167c0))
+
 ## [1.3.28](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.27...v1.3.28) (2021-08-08)
 
 
