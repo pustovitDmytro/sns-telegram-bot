@@ -6,6 +6,8 @@ import router from './router';
 const { prefix, port } = appConfig;
 const app = express();
 
+app.disable('x-powered-by');
+
 app.use(middlewares.json);
 app.use(middlewares.urlencoded);
 app.use(middlewares.cors);
