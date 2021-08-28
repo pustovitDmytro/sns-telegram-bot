@@ -1,3 +1,23 @@
+## [1.3.30](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.29...v1.3.30) (2021-08-28)
+
+
+### Chore
+
+* adds bump strategy for devDependencies (non-major) ([03c9587](https://github.com/pustovitDmytro/sns-telegram-bot/commit/03c958728c482d04225d3368aebae8fadc7d6a4d))
+* adds gitleaks to circle pipeline ([114946e](https://github.com/pustovitDmytro/sns-telegram-bot/commit/114946e5b0a0ec0437929c5963e7efe258391b9e))
+* Lock file maintenance ([47bfacf](https://github.com/pustovitDmytro/sns-telegram-bot/commit/47bfacf4e2ffe672c96345481ddfa6811d4d4d69))
+* Lock file maintenance ([19c2389](https://github.com/pustovitDmytro/sns-telegram-bot/commit/19c23891056afb813e4dde92e7f40f0905896bc9))
+* Lock file maintenance ([2b00aec](https://github.com/pustovitDmytro/sns-telegram-bot/commit/2b00aec84097bd21c51a43ab785225798753dbae))
+* Lock file maintenance ([dea06c9](https://github.com/pustovitDmytro/sns-telegram-bot/commit/dea06c9d3e2dd4448e997ee081425b1a765fae87))
+* Lock file maintenance ([e0043d8](https://github.com/pustovitDmytro/sns-telegram-bot/commit/e0043d89de5576939e701f567ab1a871c2c8a057))
+* Lock file maintenance ([5d305a8](https://github.com/pustovitDmytro/sns-telegram-bot/commit/5d305a8337cccbb1efcb4885805960941f40b143))
+* Update devDependencies (non-major) ([33211c3](https://github.com/pustovitDmytro/sns-telegram-bot/commit/33211c31d168fc187eb028f92eaeeff48ccfd085))
+* Update devDependencies (non-major) to v13 ([6894ad9](https://github.com/pustovitDmytro/sns-telegram-bot/commit/6894ad97aeac91f931506c360822f81c861e2e83))
+
+### Fix
+
+* Disclosing fingerprints from web application technologies [security] ([f9f95fe](https://github.com/pustovitDmytro/sns-telegram-bot/commit/f9f95fe0425e4b9a0f463c73f7a7571ae5d464b2))
+
 ## [1.3.29](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.28...v1.3.29) (2021-08-16)
 
 
