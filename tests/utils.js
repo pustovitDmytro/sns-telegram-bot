@@ -3,9 +3,9 @@ import path from 'path';
 import { entry } from './constants';
 
 export function extractUrls(text) {
-    const pattern = /(?:(?:https?|ftp):\/\/|[\da-z]+\.)(?:(?:[^\s()<>]+|\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))?\))+(?:\((?:[^\s()<>]+|(?:\(?:[^\s()<>]+\)))?\)|[^\s!"'(),.:;<>?[\]`{}«»‘’“”]))?/;
+    const pattern = /(?:(?:https?|ftp):\/\/|[\da-z]+\.)(?:(?:[^\s()<>]|\((?:[^\s()<>]+|\([^\s()<>]+\))?\))+(?:\((?:[^\s()<>]+|\(?:[^\s()<>]+\))?\)|[^\s!"'(),.:;<>?[\]`{}«»‘’“”]))?/;
 
-    return text.match(new RegExp(pattern, 'ig')).map(u => new URL(u));
+    return text.match(new RegExp(pattern, 'gi')).map(u => new URL(u));
 }
 
 export function load(relPath, clearCache) {
