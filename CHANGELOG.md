@@ -1,3 +1,15 @@
+## [1.3.31](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.30...v1.3.31) (2021-09-09)
+
+
+### Chore
+
+* Update devDependencies (non-major) ([ef550c0](https://github.com/pustovitDmytro/sns-telegram-bot/commit/ef550c0f16559b34fff5f59aedaf16857f1342d3))
+* Update devDependencies (non-major) (major) (#71) ([ea39af8](https://github.com/pustovitDmytro/sns-telegram-bot/commit/ea39af815f95a2505f1ae08f1715a40539105a66)), closes [#71](https://github.com/pustovitDmytro/sns-telegram-bot/issues/71)
+
+### Upgrade
+
+* package.json & package-lock.json to reduce vulnerabilities [base-api-client] (#72) ([28786a2](https://github.com/pustovitDmytro/sns-telegram-bot/commit/28786a2cb802b545c8a726ba4123c221802b4496)), closes [#72](https://github.com/pustovitDmytro/sns-telegram-bot/issues/72)
+
 ## [1.3.30](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.29...v1.3.30) (2021-08-28)
 
 
