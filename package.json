@@ -91,7 +91,7 @@
     "winston-array-transport": "^1.1.5"
   },
   "dependencies": {
-    "base-api-client": "1.5.2",
+    "base-api-client": "1.5.3",
     "body-parser": "1.19.0",
     "confme": "1.1.0",
     "cors": "2.8.5",
