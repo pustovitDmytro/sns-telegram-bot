@@ -1,3 +1,28 @@
+# [1.4.0](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.32...v1.4.0) (2021-09-25)
+
+
+### Chore
+
+* adds  a security policy ([ed86aba](https://github.com/pustovitDmytro/sns-telegram-bot/commit/ed86aba2326eab4d7ef6045913a06b8e80b73dce))
+* adds sponsorships ([35ed8e0](https://github.com/pustovitDmytro/sns-telegram-bot/commit/35ed8e0ddac94bdc52545be1d533be48495c8d60))
+* fixes audit [devDependencies] ([d08b1fc](https://github.com/pustovitDmytro/sns-telegram-bot/commit/d08b1fc075b7eef59c59f755e1ee96748824e415))
+* Lock file maintenance ([29fe760](https://github.com/pustovitDmytro/sns-telegram-bot/commit/29fe76014232a02ab882c7b0f64c87138cc1999a))
+* Lock file maintenance ([36c5f1f](https://github.com/pustovitDmytro/sns-telegram-bot/commit/36c5f1ffb45dc32e467210595cc7d6c6a3f0aeda))
+* Lock file maintenance ([e77d5d4](https://github.com/pustovitDmytro/sns-telegram-bot/commit/e77d5d4ad738a22189ca3da5ea1d5c3005a475e5))
+* Lock file maintenance ([9892cc5](https://github.com/pustovitDmytro/sns-telegram-bot/commit/9892cc51c4e0d99e41ce06568482891d30c78e70))
+* Lock file maintenance ([98e62b3](https://github.com/pustovitDmytro/sns-telegram-bot/commit/98e62b366b572d5154a2b409bda203c4ffa7d62e))
+* Lock file maintenance ([833fc35](https://github.com/pustovitDmytro/sns-telegram-bot/commit/833fc35e19cd632cdc81536b718c9d5f546053a5))
+* Lock file maintenance ([7af4484](https://github.com/pustovitDmytro/sns-telegram-bot/commit/7af448441cafbebb04557cf657a21e7e9faab355))
+* Lock file maintenance ([682584b](https://github.com/pustovitDmytro/sns-telegram-bot/commit/682584bd74bcfdbaa6b5747159a8d35f1469b6b5))
+* Lock file maintenance ([1ffc991](https://github.com/pustovitDmytro/sns-telegram-bot/commit/1ffc991529c6f05ea965e9217c215fad4fab2e59))
+* Update devDependencies (non-major) ([51200bf](https://github.com/pustovitDmytro/sns-telegram-bot/commit/51200bf4f3ac07c957f6861fd819319a28710689))
+* Update devDependencies (non-major) (#48) ([b3f6184](https://github.com/pustovitDmytro/sns-telegram-bot/commit/b3f6184966d64e7a20a5176ddca6c63d1e275520)), closes [#48](https://github.com/pustovitDmytro/sns-telegram-bot/issues/48)
+
+### New
+
+* adds AWSAccountId to the template ([c649354](https://github.com/pustovitDmytro/sns-telegram-bot/commit/c649354d47a263fbad2e271e5ebe32b99f12e55a))
+* adds tz to date message ([5a61eeb](https://github.com/pustovitDmytro/sns-telegram-bot/commit/5a61eeb98b8bd8d2d1420089713f79b7eaa5bb28))
+
 ## [1.3.32](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.3.31...v1.3.32) (2021-09-13)
 
 
