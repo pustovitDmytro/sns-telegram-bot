@@ -11,7 +11,8 @@ export default class SnsEvent extends ServiceBase {
         'NewStateValue'   : [ 'required', 'string' ],
         'NewStateReason'  : [ 'required', 'string' ],
         'StateChangeTime' : [ 'required', 'date' ],
-        'Region'          : [ 'required', 'string' ]
+        'Region'          : [ 'required', 'string' ],
+        'AWSAccountId'    : [ 'required', 'string' ]
     };
 
     async execute(data) {
