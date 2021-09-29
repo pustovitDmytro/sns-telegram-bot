@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.1...v1.4.2) (2021-09-29)
+
+
+### Upgrade
+
+* Update dependency yargs to v17.2.1 ([74506ac](https://github.com/pustovitDmytro/sns-telegram-bot/commit/74506acafeeebe0197e492e4836dabab9b2f88e9))
+
 ## [1.4.1](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.0...v1.4.1) (2021-09-27)
 
 
