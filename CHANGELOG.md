@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.4...v1.4.5) (2022-01-23)
+
+
+### Upgrade
+
+* Update dependency express to v4.17.2 (#94) ([91793f1](https://github.com/pustovitDmytro/sns-telegram-bot/commit/91793f1e2243f8a6744ad37e2fca83045bb5d3cb)), closes [#94](https://github.com/pustovitDmytro/sns-telegram-bot/issues/94)
+
 ## [1.4.4](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.3...v1.4.4) (2022-01-23)
 
 
