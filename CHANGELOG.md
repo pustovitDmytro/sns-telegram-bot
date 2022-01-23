@@ -1,3 +1,35 @@
+## [1.4.3](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.2...v1.4.3) (2022-01-23)
+
+
+### Chore
+
+* (ci) fix gitleaks version ([badd1c1](https://github.com/pustovitDmytro/sns-telegram-bot/commit/badd1c1f473e4b3b3cac41996ce3b2212281b131))
+* adds circle-ci conditions ([5a40980](https://github.com/pustovitDmytro/sns-telegram-bot/commit/5a4098019c0450476f15cee293424d0ddcfb298c))
+* adds telegra.ph release notes ([aa811a5](https://github.com/pustovitDmytro/sns-telegram-bot/commit/aa811a517e60cfdf194191a4f7629773e3b4ccc8))
+* adds whitesorce bolt bot ([0888eee](https://github.com/pustovitDmytro/sns-telegram-bot/commit/0888eee49d490c03a2d773287f1270e8a617d8ca))
+* calc fossa results in cirrus ([b2b48c1](https://github.com/pustovitDmytro/sns-telegram-bot/commit/b2b48c149377cdfc6395e35b44d523ad73c370f7))
+* change renovate schedule ([b983eab](https://github.com/pustovitDmytro/sns-telegram-bot/commit/b983eab7c9bf231bcd38b95d74adbd2e0b519d7c))
+* drop semantic-release preinstalled plugins ([69b1950](https://github.com/pustovitDmytro/sns-telegram-bot/commit/69b19507f23c5ca54a97d596ac3c35329d9945d8))
+* fixes audit ([12951f5](https://github.com/pustovitDmytro/sns-telegram-bot/commit/12951f5a2b0d58e466001ae58d64ec61a87d75c0))
+* fixes audit ([14597ff](https://github.com/pustovitDmytro/sns-telegram-bot/commit/14597ffa2ac256fdd24954569623ae9cf96e3bce))
+* fixes later schedule ([a0cfb5c](https://github.com/pustovitDmytro/sns-telegram-bot/commit/a0cfb5cbb1ca216b4a58bb8c644dc20359ae21b3))
+* fixes some npm audit vulnerabilities ([9330c38](https://github.com/pustovitDmytro/sns-telegram-bot/commit/9330c3847084d753e1c1969bc96f109c67e7e847))
+* fixes some npm audit vulnerabilities ([f7a14d5](https://github.com/pustovitDmytro/sns-telegram-bot/commit/f7a14d5d00fb5aa6f2e5a02069958114562ba185))
+* integrate lalaps ([dd4f238](https://github.com/pustovitDmytro/sns-telegram-bot/commit/dd4f2389b10a309482770bd12e73191ef6b89f6f))
+* replace appveyor to actions ([13aff75](https://github.com/pustovitDmytro/sns-telegram-bot/commit/13aff75ca141f20997a700b138db61836cff06b5))
+* test-security in separete ci job ([a4bd846](https://github.com/pustovitDmytro/sns-telegram-bot/commit/a4bd846eefbe854e0b2a83adc80d2b4ab3aeedd5))
+* test-security in separete ci job ([9559dbc](https://github.com/pustovitDmytro/sns-telegram-bot/commit/9559dbc6afc7c3a3b269d18fea63018dbe8fb79c))
+* update deps badge ([0836169](https://github.com/pustovitDmytro/sns-telegram-bot/commit/0836169878ed6749127174f56cde02b91fdd69cb))
+* Update devDependencies (non-major) ([609151a](https://github.com/pustovitDmytro/sns-telegram-bot/commit/609151afd6bc58ff56003e33d85160cff9635b27))
+* Update devDependencies (non-major) ([9429cc5](https://github.com/pustovitDmytro/sns-telegram-bot/commit/9429cc5bac6e1fe5c9d50128214797329e826418))
+* Update devDependencies (non-major) ([5b1a6c3](https://github.com/pustovitDmytro/sns-telegram-bot/commit/5b1a6c36373cd90d68dbb19cea6b59b3985f1468))
+* Update devDependencies (non-major) (major) ([b3b1758](https://github.com/pustovitDmytro/sns-telegram-bot/commit/b3b17587bf1182833622d5453787a00cb47c7ecd))
+* upgrade semantic-release to v.19 [security] ([0888454](https://github.com/pustovitDmytro/sns-telegram-bot/commit/08884548499894d6a5298a1be3d107defce5c419))
+
+### Docs
+
+* update year in license ([e2dec02](https://github.com/pustovitDmytro/sns-telegram-bot/commit/e2dec024ae5885cd6c4a41d68b3a2ad910a2c7ea))
+
 ## [1.4.2](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.1...v1.4.2) (2021-09-29)
 
 
