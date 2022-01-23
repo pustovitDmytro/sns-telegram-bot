@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.3...v1.4.4) (2022-01-23)
+
+
+### Upgrade
+
+* Update dependency body-parser to v1.19.1 (#93) ([5197f19](https://github.com/pustovitDmytro/sns-telegram-bot/commit/5197f19a253d52b3e1222e85a7736159b6cc629e)), closes [#93](https://github.com/pustovitDmytro/sns-telegram-bot/issues/93)
+
 ## [1.4.3](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.2...v1.4.3) (2022-01-23)
 
 
