@@ -1,3 +1,11 @@
+## [1.4.6](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.5...v1.4.6) (2022-01-24)
+
+
+### Upgrade
+
+* Update dependency confme to v1.1.1 (#84) ([02db4a3](https://github.com/pustovitDmytro/sns-telegram-bot/commit/02db4a3c7aa89a24f27d388917220c208de64b51)), closes [#84](https://github.com/pustovitDmytro/sns-telegram-bot/issues/84)
+* Update dependency qs to v6.10.3 (#95) ([336177c](https://github.com/pustovitDmytro/sns-telegram-bot/commit/336177ca2f0d6ef4a3bb8c06453a2c9a6ca339c0)), closes [#95](https://github.com/pustovitDmytro/sns-telegram-bot/issues/95)
+
 ## [1.4.5](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.4...v1.4.5) (2022-01-23)
 
 
