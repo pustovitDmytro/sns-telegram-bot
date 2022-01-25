@@ -1,6 +1,6 @@
 {
   "name": "sns-telegram-bot",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "Telegram transport for SNS notifications",
   "main": "runner.js",
   "scripts": {
