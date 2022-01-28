@@ -3,18 +3,18 @@ import X from './X';
 export default X;
 
 export class TG_ERROR extends X {
-    code = 'TELEGRAM_API_ERROR'
+    code = 'TELEGRAM_API_ERROR';
 
-    message = this.payload.message
+    message = this.payload.message;
 }
 
 
 export class ACTION_NOT_PERMITTED extends X {
-    message = 'user not permitted for this action'
+    message = 'user not permitted for this action';
 }
 
 export class VALIDATION_FAILED extends X {
-    message = 'validation failed'
+    message = 'validation failed';
 
-    fields = this.payload
+    fields = this.payload;
 }

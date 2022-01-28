@@ -46,9 +46,9 @@ class Test {
         await fse.remove(tmpFolder);
     }
 
-    mockAPI = mockAPI
+    mockAPI = mockAPI;
 
-    unMockAPI= unMockAPI
+    unMockAPI = unMockAPI;
 
     async findTrackLog(query) {
         const tracks = await this.getTracks();

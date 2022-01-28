@@ -2,7 +2,7 @@ import LIVR from 'livr';
 import { VALIDATION_FAILED } from 'src/error';
 
 export default class ServiceBase {
-    static LOG_LEVEL = 'info'
+    static LOG_LEVEL = 'info';
 
     constructor(args) {
         this.context = args.context || {};

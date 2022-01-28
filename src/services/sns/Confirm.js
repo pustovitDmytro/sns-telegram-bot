@@ -4,7 +4,7 @@ import ServiceBase from '../Base';
 const api = new AWSApiClient();
 
 export default class ConfirmSNS extends ServiceBase {
-    static LOG_LEVEL = 'verbose'
+    static LOG_LEVEL = 'verbose';
 
     static rules = {
         'Type'         : [ 'required', { eq: 'SubscriptionConfirmation' } ],

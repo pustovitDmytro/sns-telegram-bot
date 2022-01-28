@@ -6,7 +6,7 @@ const AWS_REQUEST_TYPES = {
 };
 
 export default class AWSSessionsCheck extends ServiceBase {
-    static LOG_LEVEL = 'verbose'
+    static LOG_LEVEL = 'verbose';
 
     static rules = {
         data : [ 'required', { 'nested_object' : {
