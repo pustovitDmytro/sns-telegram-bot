@@ -1,17 +1,17 @@
 import Base from './BaseController';
 
 export default class ExpressController extends Base {
-    static paramsBuilder = req => ({ ...req.query, ...req.params, ...req.body })
+    static paramsBuilder = req => ({ ...req.query, ...req.params, ...req.body });
 
-    static contexBuilder = req => req._context
+    static contexBuilder = req => req._context;
 
     static optionsBuilder = () => ({
         confirm : true,
         verbose : false,
         quiet   : false
-    })
+    });
 
-    static renderAsJson = (req, res, next, data) => res.send(data)
+    static renderAsJson = (req, res, next, data) => res.send(data);
 
     // static renderAsFile = (req, res, next, data) => {
     //     const { stream, filename, status } = data;
@@ -34,7 +34,7 @@ export default class ExpressController extends Base {
         }
 
         ExpressController.renderAsJson(req, res, next, data);
-    }
+    };
 
     async serviceRunner({
         serviceClass,

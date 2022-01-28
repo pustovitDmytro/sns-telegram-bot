@@ -80,7 +80,7 @@ export class Telegram {
         if (answer) {
             await this.sendMessage(update.message.to, answer);
         }
-    }
+    };
 
     polling = async () => {
         const updates = await this.api.getUpdates(this.lastUpdate);
@@ -90,7 +90,7 @@ export class Telegram {
         }
 
         await Promise.all(updates.map((element) => this.processUpdate(element)));
-    }
+    };
 
     sendMessage(chat, message) {
         return this.api.sendMessage(chat.id, message);

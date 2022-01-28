@@ -74,9 +74,9 @@ class Cipher extends AES {
         ...'abcdefghijklmnopqrstuvwxyz',  // eslint-disable-line no-secrets/no-secrets
         ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ',  // eslint-disable-line no-secrets/no-secrets
         ...'0123456789'
-    ]
+    ];
 
-    inAlphabet = [ ...'0123456789abcdef.' ]
+    inAlphabet = [ ...'0123456789abcdef.' ];
 
     encrypt(payload) {
         const string = JSON.stringify(payload);

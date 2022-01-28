@@ -4,7 +4,7 @@ import telegram from 'lib/telegram';
 import ServiceBase from '../Base';
 
 export default class SnsEvent extends ServiceBase {
-    static LOG_LEVEL = 'verbose'
+    static LOG_LEVEL = 'verbose';
 
     static rules = {
         'AlarmName'       : [ 'required', 'string' ],

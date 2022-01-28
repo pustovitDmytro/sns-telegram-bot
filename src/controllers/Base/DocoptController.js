@@ -32,25 +32,25 @@ export function docoptParams(opts, { include, exclude } = {}) {
 }
 
 export default class DocoptController extends Base {
-    static paramsBuilder = opts => docoptParams(opts, { exclude: [ 'confirm', 'verbose', 'quiet' ] })
+    static paramsBuilder = opts => docoptParams(opts, { exclude: [ 'confirm', 'verbose', 'quiet' ] });
 
-    static contexBuilder = opts => opts.context || opts['--context'] && JSON.parse(opts['--context'])
+    static contexBuilder = opts => opts.context || opts['--context'] && JSON.parse(opts['--context']);
 
-    static optionsBuilder = opts => docoptParams(opts, { include: [ 'confirm', 'verbose', 'quiet' ] })
+    static optionsBuilder = opts => docoptParams(opts, { include: [ 'confirm', 'verbose', 'quiet' ] });
 
     static renderAsJson = data => {
         logger.log('info', data);
         logger.info('DONE');
 
         return data;
-    }
+    };
 
     static renderAsExit = data => {
         const exitCode = data.status ? 0 : 1;
 
         // eslint-disable-next-line no-process-exit
         process.exit(exitCode);
-    }
+    };
 
     async serviceRunner({
         serviceClass,
