@@ -1,3 +1,15 @@
+## [1.4.9](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.8...v1.4.9) (2022-01-31)
+
+
+### Chore
+
+* fixes some npm audit vulnerabilities (#105) ([b2892a4](https://github.com/pustovitDmytro/sns-telegram-bot/commit/b2892a43f425978fcf3b2ed05ea4b76e364c3cd3)), closes [#105](https://github.com/pustovitDmytro/sns-telegram-bot/issues/105)
+* Lock file maintenance (#82) ([ae15064](https://github.com/pustovitDmytro/sns-telegram-bot/commit/ae150649cedc78494476eda47b1a2cc60da9d566)), closes [#82](https://github.com/pustovitDmytro/sns-telegram-bot/issues/82)
+
+### Upgrade
+
+* Update dependency winston to v3.5.0 (#107) ([25bdbba](https://github.com/pustovitDmytro/sns-telegram-bot/commit/25bdbba3f0da84d601f9461b095fda1b7c8c6a30)), closes [#107](https://github.com/pustovitDmytro/sns-telegram-bot/issues/107)
+
 ## [1.4.8](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.7...v1.4.8) (2022-01-28)
 
 
