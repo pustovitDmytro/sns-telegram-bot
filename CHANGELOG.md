@@ -1,3 +1,10 @@
+## [1.4.10](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.9...v1.4.10) (2022-02-04)
+
+
+### Upgrade
+
+* Update pustovitDmytro's packages (#108) ([801088d](https://github.com/pustovitDmytro/sns-telegram-bot/commit/801088d0a0373946867136f9f894f1ea67c27fc4)), closes [#108](https://github.com/pustovitDmytro/sns-telegram-bot/issues/108)
+
 ## [1.4.9](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.8...v1.4.9) (2022-01-31)
 
 
