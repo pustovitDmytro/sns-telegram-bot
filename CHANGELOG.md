@@ -1,3 +1,10 @@
+## [1.4.11](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.10...v1.4.11) (2022-02-04)
+
+
+### Upgrade
+
+* Update dependency winston to v3.5.1 (#109) ([f7d7d19](https://github.com/pustovitDmytro/sns-telegram-bot/commit/f7d7d196420d831aaa3bd5e01975d112764a2fe8)), closes [#109](https://github.com/pustovitDmytro/sns-telegram-bot/issues/109)
+
 ## [1.4.10](https://github.com/pustovitDmytro/sns-telegram-bot/compare/v1.4.9...v1.4.10) (2022-02-04)
 
 
