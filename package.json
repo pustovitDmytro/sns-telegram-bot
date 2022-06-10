@@ -79,7 +79,7 @@
     "nodemon": "^2.0.15",
     "nyc": "^15.1.0",
     "rest-chronicle": "^2.0.0",
-    "semantic-release": "^19.0.2",
+    "semantic-release": "^19.0.3",
     "semantic-release-heroku": "^1.3.3",
     "semantic-release-telegram": "^1.5.1",
     "supertest": "^6.2.2",
