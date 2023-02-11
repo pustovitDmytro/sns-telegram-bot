@@ -76,7 +76,7 @@
     "mocha": "^9.2.0",
     "mocha-junit-reporter": "^2.0.2",
     "node-package-tester": "^1.2.0",
-    "nodemon": "^2.0.15",
+    "nodemon": "^2.0.20",
     "nyc": "^15.1.0",
     "rest-chronicle": "^2.0.0",
     "semantic-release": "^19.0.2",
