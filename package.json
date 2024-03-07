@@ -94,7 +94,7 @@
     "dayjs": "1.10.7",
     "dotenv": "16.0.0",
     "express": "4.17.2",
-    "handlebars": "4.7.7",
+    "handlebars": "4.7.8",
     "livr": "2.3.3",
     "livr-extra-rules": "1.2.1",
     "logger-decorator": "1.6.2",
